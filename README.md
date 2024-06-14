@@ -26,7 +26,7 @@ Since 2016, the company's marketing strategy has been to leverage the company's 
 
 <br>
 
-Cyclistic's **Chief Marketing Officer** - Lucy Moreno - has thus decided that it would be most advantageous to **convert existing casual users** into annual members.
+Cyclistic's **Chief Marketing Officer** - Lucy Moreno - has thus decided that it would be most advantageous to **convert existing casual users** into annual members, rather than launch a marketing campaign to acquire brand-new users.
 
 However, the marketing team has asked for a little more info on current users to inform their efforts. 
 
@@ -57,4 +57,8 @@ For this project, I decided to analyze a full year of ridesharing data. After ta
 
 ![Group 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/1c2e4a28-1100-4fc0-80bc-13fd9aa52173)
 
+After the ZIPs were downloaded, I created two separate folders. The first folder would contain the copies that I would directly edit in Excel, while the one below contained the original files in case any complications arose along the way: 
 
+![Screenshot 2024-06-14 at 2 25 24 PM 1 (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/addaa32c-f805-4a3a-bc25-b7c55a627fa5)
+
+The 
