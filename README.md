@@ -51,4 +51,10 @@ The CMO would like us to answer ****three main questions**** to guide the upcomi
 
 # Part I: Downloading and Accessing the Data 
 
+<br>
+
+For this project, I decided to analyze a full year of ridesharing data. After taking a look at the ZIP files, I located the data for 2023 and downloaded it: 
+
+![Group 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/1c2e4a28-1100-4fc0-80bc-13fd9aa52173)
+
 
