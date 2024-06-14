@@ -49,7 +49,7 @@ The CMO would like us to answer ****three main questions**** to guide the upcomi
 <br>
 
 
-# Part I: Downloading and Accessing the Data 
+# Part I: Downloading and Assessing the Datasets
 
 <br>
 
@@ -57,8 +57,28 @@ For this project, I decided to analyze a full year of ridesharing data. After ta
 
 ![Group 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/1c2e4a28-1100-4fc0-80bc-13fd9aa52173)
 
-After the ZIPs were downloaded, I created two separate folders. The first folder would contain the copies that I would directly edit in Excel, while the one below contained the original files in case any complications arose along the way: 
+After the ZIPs were downloaded, I created two separate folders. One would contain the original files for future reference, while the other contained the CSVs that I would directly edit. 
 
-![Screenshot 2024-06-14 at 2 25 24 PM 1 (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/addaa32c-f805-4a3a-bc25-b7c55a627fa5)
+> NOTE: The data did **not** include information about individual users. Each row simply represented a bike ride that had taken place. Although this meant it was impossible to analyze individual user habits or count the number of members compared to casual riders, this would do little to impact my success in answering the business question of how casual rider behavior differed from member behavior. 
 
-The 
+<br>
+
+Each one of the 12 datasets (one for each month) contained **13 columns**, which we'll break down below: 
+
+<br>
+
+  1. **ride_id:** The unique ID code assigned for each ride.
+  2. **rideable_type:** Which of the three types of Cyclistic bikes was used (classic, electric, or docked)
+  3. **started_at**: The day, month, year, hour, and minute that the bike ride started.
+  4. **ended_at**: The day, month, year, hour, and minute that the bike ride ended.
+  5. **start_station_name:** The name of the station where the ride began.
+  6. **start_station_id**: The unique ID of the station where the ride began.
+  7. **end_station_name:** The name of the station where the ride was completed.
+  8. **end_station_id**: The unique ID of the station where the ride was completed.
+  9. **start_lat**: The latitude coordinates associated with the ride's start station.
+  10. **start_lng**: The longitude coordinates associated with the ride's start station.
+  11. **end_lat**: The latitude coordinates associated with the ride's end station.
+  12. **end_lng**: The longitude coordinates associated with the ride's end station.
+  13. **member_casual**: This column indicates whether the rider was a member or a casual user.
+
+<br>
