@@ -9,7 +9,8 @@
 This case study from the Google Data Analytics Certificate program explores the 2023 data of Cyclistic: a fictional **bikesharing** company. 
 
 
-We'll be using **Microsoft Excel, MySQL** and **Tableau**  to carry out the complete process of data cleaning, data transformation, manipulation, analysis, and visualization to answer the questions of our stakeholders. 
+
+For this project, we'll be using **Microsoft Excel, MySQL** and **Tableau**  to do all of our data analysis and answer our hypothetical stakeholder's business questions. 
 
 
 
