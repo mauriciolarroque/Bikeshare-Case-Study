@@ -103,7 +103,7 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
     * Used ```=COUNTA()``` function to count all records in each column and check for blanks.
     * Used ```=UNIQUE()``` function to spell-check and look through the set of unique values in each column. 
-    * Compared ```=UNIQUE(ROWS())``` function with results from the ```=COUNTA()``` function to confirm that all **ride_ids** were non-duplicates (thus making **ride_id** our ```primary key 🔑```).
+    * Compared =UNIQUE(ROWS()) function with results from the =COUNTA() function to confirm that all **ride_ids** were non-duplicates (thus making **ride_id** our ```primary key 🔑```).
     * Ran ```=TRIM()``` function to get rid of leading or trailing spaces in each column.
 
       * Results: The ride_id, rideable_type, started_at, ended_at, start_lat, start_lng, and member_casual columns had zero blank values across all datasets.
