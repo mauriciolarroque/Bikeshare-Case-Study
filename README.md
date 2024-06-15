@@ -187,7 +187,16 @@ End Sub
 
   * ### Step 1: Finding Duplicates
 
-    * Although Although every ride_id showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs. Using the query below, I was able to compare how many ride_ids were unique vs. the       total number of ride_ids in each table. The example below was for the February table:
+    * Although every `ride_id` showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs. Using the query below, I was able to compare how many ride_ids were unique vs. the       total number of `ride_ids` in each table. The example below was for the February table:
+
+<br>
+
+```mysql
+SELECT 
+    COUNT(ride_id) AS total_values,               -- Represents all the ride_id values
+    COUNT(DISTINCT ride_id) AS unique_values      -- Represents every UNIQUE ride_id value
+FROM february_2023                                -- We'll use the February data as an example
+```
 
 
 
