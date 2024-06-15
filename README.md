@@ -101,14 +101,62 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
   * ### Step 1: Assessing Data Structure
 
-    * Used ```=COUNTA()``` function to count all rows.
+    * Used ```=COUNTA()``` function to count all rows in each column.
     * Used ```=UNIQUE(ROWS())``` function to confirm that all **ride_ids** were unique values (thus making **ride_id** our primary key).
+      * Results: The ride_id, rideable_type, started_at, ended_at, start_lat, start_lng, and member_casual columns had zero blank values across all datasets.
+        * This meant that every ride has its own unique id and there was complete information on which type of bike wa sused, how long the ride lasted, which coordinates were associated with the ride's start 
+          station, and which category of user (member or casual) was linked to each ride.
+        * However, in all datasets, there were significant blanks in the columns for the names and ids of both the start and end stations. There were also missing values (albeit fewer) in the coordinate columns for         the end stations.
+          
+          * Given this information, I decided to ```keep the rows with blank values```, as deleting all of them might significantly impact the final analysis. The next step was to replace the blank values with                NULLS:
 
 <br>
 
-  * ### Step 2: Reformatting Dates
+  * ### Step 2: Handling Blank Values
 
-    * Changed dates in the **started_at** and **ended_at** columns to ```YYYY-MM-DD HH:MM:SS``` format. 
+    * Implemented the **Excel Macro** function (shown below) to replace all blank values with ```NULL```:
+
+<br>
+
+```vb
+
+Sub ReplaceBlanksWithNulls()
+    Dim ws As Worksheet
+    Dim rng As Range
+    Dim cell As Range
+
+    ' Set your worksheet and range here
+    On Error Resume Next
+    Set ws = ThisWorkbook.Sheets("jan_2023")
+    On Error GoTo 0
+    
+    ' Check if worksheet is found
+    If ws Is Nothing Then
+        MsgBox "Worksheet 'jan_2023' not found. Please check the sheet name.", vbCritical
+        Exit Sub
+    End If
+    
+    ' Set the range
+    Set rng = ws.UsedRange
+
+    ' Loop through each cell in the range
+    For Each cell In rng
+        ' Check if the cell is empty or contains only spaces
+        If Trim(cell.Value) = "" Then
+            cell.Value = "NULL" ' or use NA() or #N/A
+        End If
+    Next cell
+    
+    MsgBox "Blanks replaced with 'NULL' successfully.", vbInformation
+End Sub
+```
+      
+<br>
+
+  * ### Step 3: Reformatting Dates
+
+    * Changed dates in the **started_at** and **ended_at** columns to ```YYYY-MM-DD HH:MM:SS``` format using this process:
+      * Home > General > More Number Formats > Custom > Format as YYYY-MM-DD HH:MM 
    
 
 
