@@ -88,10 +88,14 @@ Each one of the 12 datasets (one for each month) contained **13 columns**, which
 <br>
 
 ## Excel Data Cleaning 
+![Microsoft_Office_Excel_(2019–present) 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/09220318-e788-4161-a9fa-16114d470271)
+
 
 <br>
 
-The first thing I did was clean up all the data in the CSVs. To make sure that all of my changes were saved, I converted them into **Excel Workbooks** and went through the following steps in each spreadsheet: 
+The first phase of this project was to clean up all the datasets. As a starting point, Excel was the ideal option to carry out the initial cleaning tasks. 
+
+To make sure that all changes were saved, I converted the CSVs into **Excel Workbooks** and went through the following steps in each spreadsheet: 
 
 <br>
 
