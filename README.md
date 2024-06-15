@@ -181,6 +181,10 @@ End Sub
 
 <br>
 
+![512px-Antu_mysql-workbench svg 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/6db7e63e-5202-4880-a61a-c1de9ac872cc)
+
+<br>
+
   * ### Step 1: Finding Duplicates
 
     * Although Although every ride_id showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs. Using the query below, I was able to compare how many ride_ids were unique vs. the       total number of ride_ids in each table. The example below was for the February table:
