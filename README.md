@@ -91,10 +91,21 @@ Each one of the 12 datasets (one for each month) contained **13 columns**, which
 
 <br>
 
-The first thing I did was clean up all the data in the CSVs. As a starting point, it was ideal to do the initial phases of data cleaning in **MS Excel** after converting the CSVs into XLSM files:
+The first thing I did was clean up all the data in the CSVs. To make sure that all of my changes were saved, I converted them into **Excel Workbooks** and went through the following steps in each spreadsheet: 
 
-  * Step 1: Assessing Data Structure
-    ° Ran 
+<br>
+
+  * ### Step 1: Assessing Data Structure
+
+    * Used ```=COUNTA()``` function to count all rows.
+    * Used ```=UNIQUE(ROWS())``` function to confirm that all **ride_ids** were unique values.
+
+<br>
+
+  * ### Step 2: Reformatting Dates
+
+    * Changed dates in the **started_at** and **ended_at** columns to YYYY-MM-DD HH:MM:SS form
+   
 
 
 
