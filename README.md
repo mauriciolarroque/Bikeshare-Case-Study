@@ -125,9 +125,9 @@ Sub ReplaceBlanksWithNulls()
     Dim rng As Range
     Dim cell As Range
 
-    ' Set your worksheet and range here
+    ' Set worksheet (modify to jan_2023, feb_2023, etc. as needed) and range here
     On Error Resume Next
-    Set ws = ThisWorkbook.Sheets("jan_2023")
+    Set ws = ThisWorkbook.Sheets("jan_2023") 
     On Error GoTo 0
     
     ' Check if worksheet is found
