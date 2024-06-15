@@ -161,13 +161,28 @@ End Sub
 
     * Changed dates in the **started_at** and **ended_at** columns to ```YYYY-MM-DD HH:MM:SS``` format using this process:
       * Home > General > More Number Formats > Custom > Format as YYYY-MM-DD HH:MM
-      * This would make the data much easier to work with in **SQL** and m
+      * This would make the data **SQL-friendly** for the upcoming analysis.
 
 <br>
 
-  * ### Step 4: Reformatting Dates
+ - Due to the fact that I was dealing with massive datasets (containing almost `6 million` rows in total), my laptop was having a hard time carrying out data cleaning tasks.
 
-    *
+ - Therefore, I converted the Excel Workbooks back into their original CSV file format, created a new **local connection** in `MySQL Workbench`, and used `Table Data Import Wizard` to upload each dataset individually.
+ 
+   - Although this took an incredibly long time (more than 24 hours in total), I was able to successfully import all of the records for each month. The next step was to do the rest of the necessary data cleaning in MySQL.
+
+<br>
+
+# Part III: Further Data Cleaning, Data Processing and Data Manipulation in MySQL Workbench
+
+<br>
+
+## MySQL Data Cleaning 
+
+<br>
+
+
+
 
   
 
