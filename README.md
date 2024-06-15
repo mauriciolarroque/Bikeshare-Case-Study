@@ -99,16 +99,19 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
-  * ### Step 1: Assessing Data Structure
+  * ### Step 1: Basic Data Cleaning
 
-    * Used ```=COUNTA()``` function to count all rows in each column.
-    * Used ```=UNIQUE(ROWS())``` function to confirm that all **ride_ids** were unique values (thus making **ride_id** our primary key).
+    * Used ```=COUNTA()``` function to count all records in each column and check for blanks.
+    * Used ```=UNIQUE()``` function to spell-check and look through the set of unique values in each column. 
+    * Compared ```=UNIQUE(ROWS())``` function with results from the ```=COUNTA()``` function to confirm that all **ride_ids** were non-duplicates (thus making **ride_id** our primary key).
+    * Ran ```=TRIM()``` function to get rid of leading or trailing spaces in each column.
+
       * Results: The ride_id, rideable_type, started_at, ended_at, start_lat, start_lng, and member_casual columns had zero blank values across all datasets.
-        * This meant that every ride has its own unique id and there was complete information on which type of bike wa sused, how long the ride lasted, which coordinates were associated with the ride's start 
+        * This meant that every ride has its own unique id and there was complete information on which type of bike was used, how long the ride lasted, which coordinates were associated with the ride's start 
           station, and which category of user (member or casual) was linked to each ride.
-        * However, in all datasets, there were significant blanks in the columns for the names and ids of both the start and end stations. There were also missing values (albeit fewer) in the coordinate columns for         the end stations.
+        * However, in all datasets, there were significant blanks in the columns for the names and ids of both the start and end stations. There were also missing values (albeit fewer) in the coordinate columns for the end stations.
           
-          * Given this information, I decided to ```keep the rows with blank values```, as deleting all of them might significantly impact the final analysis. The next step was to replace the blank values with                NULLS:
+          * Given this information, I decided to ```keep the rows with blank values```, as deleting all of them might significantly impact the final analysis. The next step was to replace the blank values with NULLS:
 
 <br>
 
@@ -156,8 +159,16 @@ End Sub
   * ### Step 3: Reformatting Dates
 
     * Changed dates in the **started_at** and **ended_at** columns to ```YYYY-MM-DD HH:MM:SS``` format using this process:
-      * Home > General > More Number Formats > Custom > Format as YYYY-MM-DD HH:MM 
-   
+      * Home > General > More Number Formats > Custom > Format as YYYY-MM-DD HH:MM
+      * This would make the data much easier to work with in **SQL** and m
+
+<br>
+
+  * ### Step 4: Reformatting Dates
+
+    *
+
+  
 
 
 
