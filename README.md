@@ -181,6 +181,10 @@ End Sub
 
 <br>
 
+  * ### Step 1: Finding Duplicates
+
+    * Although Although every ride_id showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs. Using the query below, I was able to compare how many ride_ids were unique vs. the       total number of ride_ids in each table. The example below was for the February table:
+
 
 
 
