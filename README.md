@@ -98,13 +98,13 @@ The first thing I did was clean up all the data in the CSVs. To make sure that a
   * ### Step 1: Assessing Data Structure
 
     * Used ```=COUNTA()``` function to count all rows.
-    * Used ```=UNIQUE(ROWS())``` function to confirm that all **ride_ids** were unique values.
+    * Used ```=UNIQUE(ROWS())``` function to confirm that all **ride_ids** were unique values (thus making **ride_id** our primary key).
 
 <br>
 
   * ### Step 2: Reformatting Dates
 
-    * Changed dates in the **started_at** and **ended_at** columns to YYYY-MM-DD HH:MM:SS form
+    * Changed dates in the **started_at** and **ended_at** columns to ```YYYY-MM-DD HH:MM:SS``` format. 
    
 
 
