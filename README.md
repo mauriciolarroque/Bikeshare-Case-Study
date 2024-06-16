@@ -364,17 +364,16 @@ WHERE ride_month IN ("04", "05", "06");
 WITH ride_counts AS
 (
 SELECT 
-	COUNT(CASE WHEN member_casual = "casual" THEN ride_id ELSE NULL END) AS casual,
+    COUNT(CASE WHEN member_casual = "casual" THEN ride_id ELSE NULL END) AS casual,
     COUNT(CASE WHEN member_casual = "member" THEN ride_id ELSE NULL END) AS "member"
 FROM cyclistic_2023        -- Modify to Q1, Q2, etc.
 )
 
 SELECT 
 	casual AS count_of_casual_rides_2023,
-    member AS count_of_member_rides_2023,
+        member AS count_of_member_rides_2023,
 	ROUND(casual/(casual + member)*100,2) AS percent_casual_rides_2023,
 	ROUND(member/(casual + member)*100,2) AS percent_member_rides_2023
-
 FROM ride_counts;
 ```
 
