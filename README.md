@@ -173,13 +173,7 @@ End Sub
 
 <br>
 
-# Part III: Further Data Cleaning, Data Processing and Data Manipulation in MySQL Workbench
-
-<br>
-
-<br>
-
-# MySQL Data Cleaning 
+# Part III: Further Data Cleaning in MySQL
 
 <br>
 
@@ -243,6 +237,61 @@ FROM january_2023
 WHERE ride_id LIKE "%E+%" -- Returns all records containing the characters "E+"
 GROUP BY ride_id
 ```
+
+<br>
+
+• As it turns out, there were, in fact, other non-duplicate `ride_id` values with this format. Which gave me the opportunity to change all the affected ride_ids at once: 
+
+```sql
+UPDATE january_2023
+SET ride_id = CONCAT(
+    -- Generate 8 random uppercase letters
+    SUBSTRING(CONCAT(
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26))),
+        CHAR(FLOOR(65 + (RAND() * 26)))
+    ), 1, 8),
+    -- Generate 8 random numbers
+    LPAD(FLOOR(RAND() * 100000000), 8, '0')
+)
+WHERE ride_id REGEXP 'E+'
+```
+
+<br>
+
+Finally, I ran this query to check that all `ride_ids` were unique: 
+
+```sql
+SELECT
+  (SELECT COUNT(DISTINCT ride_id) FROM january_2023) AS unique_ids, 
+    COUNT(ride_id) AS properly_formatted_ids,
+    (SELECT COUNT(ride_id) FROM january_2023) AS total_ids
+FROM 
+    january_2023
+WHERE ride_id REGEXP '^(?=.*[A-Z])(?=.*[0-9]).*$' 
+AND LENGTH(ride_id) = 16
+
+
+-- The conditions narrow down to ride_ids that are 16 characters long and contain
+-- only capitalized letters and numbers.
+```
+
+<br>
+
+After confirming that all the `ride_ids` were unique, I called it a day with the data cleaning and moved on to the data processing stage, where we will reorganize all the data into a format that is easy to work with and streamlined for effective data analysis:
+
+<br>
+
+<br>
+
+<br>
+
+# Part IV: MySQL Workbench Data Processing and Data Manipulation
 
 
 
