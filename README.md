@@ -177,7 +177,9 @@ End Sub
 
 <br>
 
-## MySQL Data Cleaning 
+<br>
+
+# MySQL Data Cleaning 
 
 <br>
 
@@ -185,9 +187,13 @@ End Sub
 
 <br>
 
-  * ### Step 1: Finding Tables with Duplicates
+   # Step 1: Resolving Issues with Duplicated Values 
 
-    * Although every `ride_id` showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs. Using the query below, I was able to compare how many ride_ids were unique vs. the       total number of `ride_ids` in each table. The example below was for the February table:
+<br>
+
+<br>
+
+   *  Using the query below, I double-checked for duplicates by comparing how many ride_ids were unique vs. the total number of `ride_ids` in each table:
 
 <br>
 
@@ -197,6 +203,49 @@ SELECT
     COUNT(DISTINCT ride_id) AS unique_values      -- Represents every UNIQUE ride_id value
 FROM february_2023                                -- We'll use the February data as an example
 ```
+
+<br>
+
+   * Although every `ride_id` showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs.
+     
+     * To find out more about them, I ran this query to show every ride_id in each table that was present more than once in the ride_id column.
+<br>
+
+```mysql
+USE cyclistic_bikeshare_2023;
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY ride_id) AS row_num, -- This returns a row number, so we can count the ride_ids
+    "January 2023" AS month_name, 
+    ride_id,                                  -- By selecting ride_id, we can see what the ride_ids look like
+    COUNT(*) AS total
+FROM january_2023
+GROUP BY ride_id 
+HAVING COUNT(*) > 1; -- This gives us all the ride_ids in the table that appear more than once
+```
+
+<br>
+
+* This showed that every duplicate had the exact same format; they were all numbers in scientific notation (ie. `3.21E+15`, `4.56E+15`, etc.).
+
+  • Since all others `ride_ids` were 16-digit combinations of 8 letters and 8 numbers, I decided to make every `ride_id` match this format.
+   
+    * However, I first ran the code **below** to check if there were any other ids with these odd characters:
+  
+<br>
+
+```sql
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY ride_id) AS row_num,
+    "January 2023" AS month_name, 
+    ride_id,
+    COUNT(*) AS total
+FROM january_2023
+WHERE ride_id LIKE "%E+%" -- Returns all records containing the characters "E+"
+GROUP BY ride_id
+```
+
+
+
 
 
 
