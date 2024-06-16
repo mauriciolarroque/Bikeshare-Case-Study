@@ -289,9 +289,17 @@ After confirming that all the `ride_ids` were unique, I called it a day with the
 
 <br>
 
+# Part IV: MySQL Data Processing, Definition and Manipulation
+
 <br>
 
-# Part IV: MySQL Workbench Data Processing and Data Manipulation
+![Sql_data_base_with_logo](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/87611e03-de29-4174-a295-8f0786d1cad4)
+
+<br>
+
+<br>
+
+# Step 1: 
 
 
 
