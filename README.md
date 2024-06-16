@@ -293,13 +293,39 @@ After confirming that all the `ride_ids` were unique, I called it a day with the
 
 <br>
 
-![Sql_data_base_with_logo](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/87611e03-de29-4174-a295-8f0786d1cad4)
+![Sql_data_base_with_logo 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/c198b878-c74d-4157-bc2c-6130ec576e3b)
 
 <br>
 
 <br>
 
-# Step 1: 
+# Step 1: Reviewing Tables 
+
+<br>
+
+
+• To get a good sense of the data types in each table, I ran this super simple query: 
+
+```sql
+DESCRIBE january_2023; -- And february_2023, march_2023, etc.
+```
+
+<br> 
+
+• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to DATETIME format: 
+
+```sql
+ALTER TABLE february_2023
+MODIFY COLUMN started_at DATETIME,
+MODIFY COLUMN ended_at DATETIME;
+```
+
+<br> 
+
+
+
+
+
 
 
 
