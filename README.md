@@ -165,15 +165,15 @@ End Sub
 
 <br>
 
- - Due to the fact that I was dealing with massive datasets (containing almost `6 million` rows in total), my laptop was having a hard time carrying out data cleaning tasks.
+ - Due to the fact that I was dealing with massive datasets (containing almost `6 million` rows in total), my laptop was having a hard time handling the spreadsheets. 
 
  - Therefore, I converted the Excel Workbooks back into their original CSV file format, created a new **local connection** in `MySQL Workbench`, and used `Table Data Import Wizard` to upload each dataset individually.
  
-   - Although this took an incredibly long time (more than 24 hours in total), I was able to successfully import all of the records for each month. The next step was to do the rest of the necessary data cleaning in MySQL.
+   - Although this took an incredibly long time (more than 24 hours in total), I was able to successfully import all of the records for each month. The next step was to process the data into a format that was easy to work with and streamlined as much as possible for data analysis. 
 
 <br>
 
-# Part III: Further Data Cleaning in MySQL
+# Part III: Data Processing in MySQL
 
 <br>
 
@@ -187,7 +187,7 @@ End Sub
 
 <br>
 
-   *  Using the query below, I double-checked for duplicates by comparing how many ride_ids were unique vs. the total number of `ride_ids` in each table:
+  * Before proceeding further, I double-checked for duplicates by comparing how many ride_ids were unique vs. the total number of `ride_ids` in each table:
 
 <br>
 
@@ -283,23 +283,12 @@ AND LENGTH(ride_id) = 16
 
 <br>
 
-After confirming that all the `ride_ids` were unique, I called it a day with the data cleaning and moved on to the data processing stage, where we will reorganize all the data into a format that is easy to work with and streamlined for effective data analysis:
-
+After confirming that all the `ride_ids` were unique, I moved on to processing the data into an easy-to-use format: 
 <br>
 
-<br>
 
-# Part IV: MySQL Data Processing, Definition and Manipulation
 
-<br>
-
-![Sql_data_base_with_logo 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/c198b878-c74d-4157-bc2c-6130ec576e3b)
-
-<br>
-
-<br>
-
-# Step 1: Reviewing Tables 
+# Step 2: Reviewing All Tables 
 
 <br>
 
@@ -322,11 +311,17 @@ MODIFY COLUMN ended_at DATETIME;
 
 <br> 
 
+<br>
 
+# Part IV: MySQL Data Processing, Definition and Manipulation
 
+<br>
 
+![Sql_data_base_with_logo 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/c198b878-c74d-4157-bc2c-6130ec576e3b)
 
+<br>
 
+<br>
 
 
 
