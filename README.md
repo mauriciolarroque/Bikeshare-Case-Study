@@ -177,7 +177,8 @@ End Sub
 
 <br>
 
-![512px-Antu_mysql-workbench svg 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/6db7e63e-5202-4880-a61a-c1de9ac872cc)
+![Sql_data_base_with_logo 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/c198b878-c74d-4157-bc2c-6130ec576e3b)
+
 
 <br>
 
@@ -284,9 +285,10 @@ AND LENGTH(ride_id) = 16
 <br>
 
 After confirming that all the `ride_ids` were unique, I moved on to processing the data into an easy-to-use format: 
+
 <br>
 
-
+<br>
 
 # Step 2: Reviewing All Tables 
 
@@ -313,15 +315,76 @@ MODIFY COLUMN ended_at DATETIME;
 
 <br>
 
-# Part IV: MySQL Data Processing, Definition and Manipulation
+<br>
+
+# Part IV: MySQL Data Analysis
 
 <br>
 
-![Sql_data_base_with_logo 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/c198b878-c74d-4157-bc2c-6130ec576e3b)
+![512px-Antu_mysql-workbench svg 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/6db7e63e-5202-4880-a61a-c1de9ac872cc)
 
 <br>
 
 <br>
+
+* Now, we're getting to the fun part of this project.
+
+  * Our original business question was to find out `how member behavior differs from casual rider behavior.` So, to kick things off, let's see `how many rides` are attributed to annual members vs. casual riders.
+
+    * We'll also be taking the percentages of each category of user – as well as dividing the data by quarterly results – to get a more complete picture of what's going on:
+
+<br>
+
+# Creating `Temporary Tables` for Q1-Q4:
+
+```sql
+CREATE TEMPORARY TABLE temp_q1
+SELECT 
+    *
+FROM cyclistic_2023
+WHERE ride_month IN ("01", "02", "03");
+
+
+CREATE TEMPORARY TABLE temp_q2
+SELECT 
+    *
+FROM cyclistic_2023
+WHERE ride_month IN ("04", "05", "06");
+
+-- Repeat process for the following quarters 
+```
+
+<br>
+
+# Finding Ride Counts by Member Category and % of Total for Each Category (Full Year and Q1-Q4)
+
+<br>
+
+```sql
+WITH ride_counts AS
+(
+SELECT 
+	COUNT(CASE WHEN member_casual = "casual" THEN ride_id ELSE NULL END) AS casual,
+    COUNT(CASE WHEN member_casual = "member" THEN ride_id ELSE NULL END) AS "member"
+FROM cyclistic_2023        -- Modify to Q1, Q2, etc.
+)
+
+SELECT 
+	casual AS count_of_casual_rides_2023,
+    member AS count_of_member_rides_2023,
+	ROUND(casual/(casual + member)*100,2) AS percent_casual_rides_2023,
+	ROUND(member/(casual + member)*100,2) AS percent_member_rides_2023
+
+FROM ride_counts;
+```
+
+<br>
+
+
+
+
+
+
 
 
 
