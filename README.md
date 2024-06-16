@@ -378,9 +378,12 @@ FROM ride_counts;
 ```
 
 <br>
+## Results: 
+
+![Frame 4 (2)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/2d045bfc-e0a7-4457-9e9c-f29c983127f9)
 
 
-
+<br>
 
 
 
