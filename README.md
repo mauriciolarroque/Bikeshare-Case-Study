@@ -355,15 +355,21 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-#### Our results show us a few interesting insights:
+### Our results show us a few interesting insights:
 
 <br>
 
 * While `24.09%` of member rides occur on the weekend (Saturday and Sunday), that figure rises to `36.25%` among casual riders. 
 
-  * Saturday and Sunday were the **least** active days for members, while casual users were **most** active on these two days.
- 
-    * 
+  * Saturday and Sunday were the `least` active days for members, while casual users were `most` active on these two days.
+
+<br>
+
+<br>
+
+### However, these results are for the entire year. Let's look at the data by quarterly results: 
+
+ * When adjusted for `Q1`, Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday. 
 
 
 
