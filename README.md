@@ -375,7 +375,10 @@ ORDER BY rc.member_casual, rc.ride_day;
 
  * When adjusted for `Q1`, Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday.
 
-   * This suggests that 
+   * This points to the possibility that casual users in the off-season tend to use bike rides for their daily commute more often than for recreational reasons.
+
+ * Meanwhile, 
+
 
 
 
