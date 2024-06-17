@@ -342,7 +342,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 | member        | Mon      | 494571          | 3660637        | 13.51                   |
 | member        | Sat      | 472855          | 3660637        | 12.92                   |
 | member        | Sun      | 408835          | 3660637        | 11.17                   |
-| member        | Thu      | 589582          | 3660637        | 16.11                   |        
+| member        | Thu      | 589582          | 3660637        | 16.11                   |
 | member        | Tue      | 576750          | 3660637        | 15.76                   |
 | member        | Wed      | 586451          | 3660637        | 16.02                   |
 | casual        | Fri      | 311914          | 2059106        | 15.15                   |
@@ -350,7 +350,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 | casual        | Sat      | 494571          | 2059106        | 19.95                   |
 | casual        | Sun      | 531593          | 2059106        | 16.30                   |
 | casual        | Thu      | 494571          | 2059106        | 13.14                   |
-| casual        | Tue      | 531593          | 2059106        | 11.96                   |      
+| casual        | Tue      | 531593          | 2059106        | 11.96                   |
 | casual        | Wed      | 494571          | 2059106        | 12.10                   |
 
 <br>
