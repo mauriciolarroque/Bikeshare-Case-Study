@@ -182,8 +182,7 @@ End Sub
 
 <br>
 
-For a `complete breakdown` of all the different data processing, data manipulation and data definition tasks I carried out in MySQL, [check out](README2.md) this page [right here](README2.md)
-
+For a `complete breakdown` of all the different data processing, data manipulation and data definition tasks I carried out in MySQL, **[check out](README2.md) this page.**
    # Step 1: Resolving Issues with Duplicated Values 
 
 <br>
