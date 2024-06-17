@@ -353,6 +353,17 @@ ORDER BY rc.member_casual, rc.ride_day;
 | casual        | Tue      | 531593          | 2059106        | 11.96                   |      
 | casual        | Wed      | 494571          | 2059106        | 12.10                   |
 
+<br>
+
+#### Our results show us a few interesting insights:
+
+<br>
+
+* While `24.09%` of member rides occur on the weekend (Saturday and Sunday), that figure rises to `36.25%` among casual riders. 
+
+  * Saturday and Sunday were the **least** active days for members, while casual users were **most** active on these two days.
+ 
+    * 
 
 
 
