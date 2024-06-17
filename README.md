@@ -228,7 +228,7 @@ WHERE ride_month IN ("04", "05", "06");
 
 <br>
 
-# Finding Ride Counts by Member Category and % of Total for Each Category (Full Year and Q1-Q4)
+# Count of Annual Member vs. Casual User Rides (Full Year and Q1-Q4)
 
 <br>
 
