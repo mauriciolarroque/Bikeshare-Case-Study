@@ -252,7 +252,7 @@ FROM ride_counts;
 
 <br>
 
-## Results: 
+## Output: 
 
 | count_of_casual_rides_2023 | count_of_member_rides_2023  | percent_casual_rides_2023 | percent_member_rides_2023 |
 |----------------------------|-----------------------------|---------------------------|---------------------------|
@@ -290,13 +290,82 @@ FROM ride_counts;
 
     * This suggests that `seasonality` plays a key role in the difference between casual rider and member behavior; members make up the bulk of winter/fall bike rides, while casual users become much more active during tourist season.
 
+### Next, let's look at how many rides took place on different days of the week:
+
+<br>
+
+<br>
+
+# Count of Member vs. Casual Rides Per Weekday
+
 <br>
 
 <br>
 
+```sql
+WITH ride_counts AS (
+    SELECT
+        member_casual,
+        ride_day,
+        COUNT(ride_id) AS number_of_rides
+    FROM cyclistic_2023
+    GROUP BY member_casual, ride_day
+),
 
+total_rides AS (
+    SELECT
+        member_casual,
+        SUM(number_of_rides) AS total_rides
+    FROM ride_counts
+    GROUP BY member_casual
+)
 
+SELECT
+    rc.member_casual,
+    rc.ride_day,
+    rc.number_of_rides,
+    tr.total_rides,
+    ROUND((rc.number_of_rides * 100.0 / tr.total_rides),2) AS percent_of_total_rides
+FROM ride_counts rc
+JOIN total_rides tr
+    ON rc.member_casual = tr.member_casual
+ORDER BY rc.member_casual, rc.ride_day;
+```
 
+<br>
+
+## Output (for Full-Year 2023):
+
+| member_casual | ride_day | number_of_rides | total_rides    | percent_of_total_rides  |
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Fri      | 531593          | 3660637        | 14.52                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Mon      | 494571          | 3660637        | 13.51                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Sat      | 472855          | 3660637        | 12.92                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Sun      | 408835          | 3660637        | 11.17                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Thu      | 589582          | 3660637        | 16.11                   |        
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Tue      | 576750          | 3660637        | 15.76                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| member        | Wed      | 586451          | 3660637        | 16.02                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Fri      | 311914          | 2059106        | 15.15                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Mon      | 531593          | 2059106        | 11.40                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Sat      | 494571          | 2059106        | 19.95                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Sun      | 531593          | 2059106        | 16.30                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Thu      | 494571          | 2059106        | 13.14                   |
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Tue      | 531593          | 2059106        | 11.96                   |      
+|---------------|----------|-----------------|----------------|-------------------------|
+| casual        | Wed      | 494571          | 2059106        | 12.10                   |
+|---------------|----------|-----------------|----------------|-------------------------|
 
 
 
