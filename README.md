@@ -182,9 +182,7 @@ End Sub
 
 <br>
 
-## For a `complete breakdown` of all the different data processing, data manipulation and data definition tasks I carried out in MySQL,
-
-**[check out](README2.md) this page here.**
+#### For a `complete breakdown` of all the different data processing, data manipulation and data definition tasks I carried out in MySQL, **[check out](README2.md) this page here.**
    
  
 <br>
