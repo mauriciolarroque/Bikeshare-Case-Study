@@ -367,9 +367,15 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
+<br>
+
 ### However, these results are for the entire year. Let's look at the data by quarterly results: 
 
- * When adjusted for `Q1`, Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday. 
+<br>
+
+ * When adjusted for `Q1`, Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday.
+
+   * This suggests that 
 
 
 
