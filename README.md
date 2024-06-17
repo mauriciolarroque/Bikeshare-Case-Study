@@ -282,7 +282,17 @@ FROM ride_counts;
 | 327101                     | 796537                      | 29.11                     |  70.89                    |
 --------------------------------------------------------------------------------------------------------------------
 
+<br>
 
+* As we can see, there is a notable spike in `casual` user rides during the spring and `summer` months.
+
+  * Although the number of member rides also increases – and the number of member rides indeed remains greater than casual rides throughout each quarter – this difference is noticeably less pronounced. Likewise, the percentages show that the gap between member and casual usage significantly narrows during Q2 and Q3. 
+
+    * This suggests that `seasonality` plays a key role in the difference between casual rider and member behavior; members make up the bulk of winter/fall bike rides, while casual users become much more active during tourist season.
+
+<br>
+
+<br>
 
 
 
