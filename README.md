@@ -334,7 +334,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-## Output (for Full-Year 2023):
+## Output (Full-Year 2023):
 
 | member_casual | ride_day | number_of_rides | total_rides    | percent_of_total_rides  |
 |---------------|----------|-----------------|----------------|-------------------------|
