@@ -324,7 +324,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-## Output 
+## Output: 
 
 | member_casual| rideable_type   | avg_ride_min | avg_ride_distance | max_ride_min | max_ride_hours | min_ride_min |min_ride_hours | max_ride_distance | min_ride_distance |
 |--------------|-----------------|--------------|-------------------|--------------|----------------|--------------|---------------|-------------------|-------------------|
@@ -334,6 +334,8 @@ ORDER BY member_casual, rideable_type;
 | casual       | docked_bike     | 182.81       | 1.35              | 98489        | 1641.4833      | 0            | 0             | 19.03             | 0
 | casual       | electric_bike   | 14.26        | 1.34              | 480          | 8.0000         | 0            | 0             | 30.4              | 0 
 
+
+<br>
 
 
 
