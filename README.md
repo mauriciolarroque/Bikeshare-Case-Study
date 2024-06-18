@@ -389,7 +389,10 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-#### * Overall, weekends were more popular with casual riders than with members during each quarter, while the   
+#### * Overall, we can deduce from this data that weekends were most popular with casual riders (particularly during the spring and summer months) while weekdays were the most popular ride days for members. 
+
+<br>
+
 
 
 
