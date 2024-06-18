@@ -284,7 +284,9 @@ FROM ride_counts;
 
 <br>
 
-* As we can see, there is a noticeable spike in `casual` user rides during the spring and `summer` months.
+* The first thing that jumps out is the fact that there are more member rides than casual rides.
+  
+* There is also a noticeable spike in `casual` user rides during the spring and `summer` months.
 
   * Although the number of member rides also increases – and the number of member rides indeed remains greater than casual rides throughout each quarter – this difference is notably less pronounced. Likewise, the percentages show that the gap between member and casual usage significantly narrows during Q2 and Q3. 
 
@@ -375,9 +377,19 @@ ORDER BY rc.member_casual, rc.ride_day;
 
  * When adjusted for `Q1` ([full data here](Q1-01.md)), Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday.
 
-   * This points to the possibility that casual users in the off-season tend to use bike rides for their daily commute more often than for recreational reasons.
+   * This raises the possibility that casual users in the off-season tend to use bike rides for their routine commute more often than for recreational purposes.
 
- * Meanwhile, 
+   * Meanwhile, member users also reflect this tendency; Tuesday and Wednesday were their most active days, while Saturday was their `least` popular day. 
+
+<br>
+
+* During `Q2` and `Q3`, however, we can see an uptick in the number of weekend rides among both member and casual users, although the increase is significantly more prominent among casual users.
+
+  * `35.9%` of casual rides in Q2 took place on the weekend, and this number steadily increased to `38.2%` for all of Q3.
+
+<br>
+
+#### * Overall, weekends were more popular with casual riders than with members during each quarter, while the   
 
 
 
