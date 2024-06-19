@@ -338,13 +338,21 @@ ORDER BY member_casual, rideable_type;
 <br>
 
 
-* Before we can even begin to analyze this data, there are some problematic data points that we need to address ASAP/ 
+* Before we can even begin to analyze this data, there are some problematic data points that we need to address ASAP. 
   
   * The maximum values were surprising, to say the least. Two of our entries here are greater than `6000` miles!
 
     * Since 6000 miles seems like a slightly excessive bike trip length (given that this is more than half the length of North America), I decided to investigate these cases.
     
-    *  Fortunately, there were only `three` of these erroneous cases. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`; this made the `Haversine formula` we created earlier measure the distance between the start station coordinates and the coordinates for a random island off the coast of South America. 
+    *  Fortunately, there were only `three` of these erroneous cases. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
+    
+    *  This made the `Haversine formula` we created earlier measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America. Because this was an indisputable dataset error, I updated these three `ride_miles` entries to **NULL** values.
+
+* The next concerning data points were related to `docked bikes.` Given that the average ride on a docked bike is `182.8` minutes, while the longest ride distance on a docked bike 
+   
+<br>
+
+<br>
 
 <!-- * On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there was only a slight difference between both groups. In terms of miles traveled, both members and casual riders travel about the same distance on an average trip. --> 
 
