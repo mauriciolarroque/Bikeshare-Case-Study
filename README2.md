@@ -196,7 +196,7 @@ ORDER BY member_casual, rideable_type;
 
     * Since 6000 miles seems excessive (given that this is more than half the length of North America), I decided to investigate these cases.
     
-    *  Fortunately, there were only `three` of these erroneous entries. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
+    *  Fortunately, there were only `three` of these erroneous values. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
     
     *  This caused the `Haversine formula` we used earlier to measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America.
 
