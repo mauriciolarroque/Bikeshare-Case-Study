@@ -306,25 +306,25 @@ FROM ride_counts;
 
 ```sql
 SELECT 
-	member_casual,
-    rideable_type,
-	ROUND(AVG(ride_duration_min),2) avg_ride_min,
-    ROUND(AVG(ride_miles),2) avg_ride_distance,
-	MAX(ride_duration_min) max_ride_min,
-	(MAX(ride_duration_min)/60) max_ride_hours,
-    MIN(ride_duration_min) min_ride_min,
-    (MIN(ride_duration_min)/60) min_ride_hours,
-    MAX(ride_miles) max_ride_distance,
-    MIN(ride_miles) min_ride_distance	
+   member_casual,
+   rideable_type,
+   ROUND(AVG(ride_duration_min),2) avg_ride_min,
+   ROUND(AVG(ride_miles),2) avg_ride_distance,
+   MAX(ride_duration_min) max_ride_min,
+   (MAX(ride_duration_min)/60) max_ride_hours,
+   MIN(ride_duration_min) min_ride_min,
+   (MIN(ride_duration_min)/60) min_ride_hours,
+   MAX(ride_miles) max_ride_distance,
+   MIN(ride_miles) min_ride_distance	
 FROM 
-	cyclistic_2023    -- Modify to Q1, Q2, etc.
+   cyclistic_2023    -- Modify to Q1, Q2, etc.
 GROUP BY member_casual, rideable_type
 ORDER BY member_casual, rideable_type;
 ```
 
 <br>
 
-## Output: 
+## Output (Scroll Right): 
 
 | member_casual| rideable_type   | avg_ride_min | avg_ride_distance | max_ride_min | max_ride_hours | min_ride_min |min_ride_hours | max_ride_distance | min_ride_distance |
 |--------------|-----------------|--------------|-------------------|--------------|----------------|--------------|---------------|-------------------|-------------------|
@@ -337,6 +337,11 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
+* On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there was only a slight difference between both groups. In terms of miles traveled, both members and casual riders travel about the same distance on an average trip.
+
+  * The maximum values were surprising, to say the least. Since 6000 miles seems like a slightly excessive bike trip length (given that this is more than half the length of North America), I decided to investigate these cases.
+    
+    *  Fortunately, there were only `three` of these erroneous cases. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`; this made the `Haversine formula` we created earlier measure the distance between the start station coordinates and the coordinates for a random island off the coast of South America. 
 
 
 
