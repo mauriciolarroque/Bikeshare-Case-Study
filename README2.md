@@ -136,3 +136,59 @@ MODIFY COLUMN started_at DATETIME,
 MODIFY COLUMN ended_at DATETIME;
 ```
 
+<br>
+
+<br>
+
+<br>
+
+
+| member_casual| rideable_type   | avg_ride_min | avg_ride_distance | max_ride_min | max_ride_hours | min_ride_min |min_ride_hours | max_ride_distance | min_ride_distance |
+|--------------|-----------------|--------------|-------------------|--------------|----------------|--------------|---------------|-------------------|-------------------|
+| member       | classic_bike    | 13.93        | 1.18              | 1560         | 26.0000        | 0            | 0             | 16.03             | 0
+| member       | electric_bike   | 11.14        | 1.43              | 482          | 8.0333         | 0            | 0             | ~~6099.4~~ 25.37  | 0
+| casual       | classic_bike    | 32.06        | 1.29              | 1560         | 26.0000        | 0            | 0             | ~~6096.86~~ 20.56 | 0
+| casual       | docked_bike     | 182.81       | 1.35              | 98489        | 1641.4833      | 0            | 0             | 19.03             | 0
+| casual       | electric_bike   | 14.26        | 1.34              | 480          | 8.0000         | 0            | 0             | 30.4              | 0 
+
+
+<br>
+
+### Part I: Addressing Outliers and Possible Errors 
+
+<br>
+
+* Before we can even begin to analyze this data, there are some problematic data points that we need to address. 
+  
+  * The maximum values were surprising, to say the least. Two of our entries here are greater than `6000` miles!
+
+    * Since 6000 miles seems excessive (given that this is more than half the length of North America), I decided to investigate these cases.
+    
+    *  Fortunately, there were only `three` of these erroneous entries. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
+    
+    *  This caused the `Haversine formula` we used earlier to measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America.
+
+       * Because this was unquestionably a dataset error (unless users ended their bike trip in the middle of the ocean), I updated these three `ride_miles` entries to **NULL** values.
+         
+<br>
+
+<br>
+
+* The next concerning data points were related to `docked bikes.`
+
+  * Given that the average ride time on a docked bike was `182.8` minutes – while the longest ride distance on a docked bike was only about 19 miles – the data points were not adding up.
+    
+    * After querying the ride times in SQL, I found that well over 4000 docked bike rides were greater than the average, and one ride had even lasted a whopping `68` days!
+
+      * In conclusion, this issue would have to be discussed and reviewed with the rest of the Cyclistic team to determine the cause and origin of the aberrant data. 
+
+   
+<br>
+
+<br> 
+
+<br>
+
+
+
+
