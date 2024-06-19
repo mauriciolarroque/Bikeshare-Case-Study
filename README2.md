@@ -142,6 +142,38 @@ MODIFY COLUMN ended_at DATETIME;
 
 <br>
 
+# Step 3: Running Summary Statistics
+
+<br>
+
+## Max, Min, & Mean Values for Members vs. Casual Riders
+
+<br>
+
+<br>
+
+```sql
+SELECT 
+   member_casual,
+   rideable_type,
+   ROUND(AVG(ride_duration_min),2) avg_ride_min,
+   ROUND(AVG(ride_miles),2) avg_ride_distance,
+   MAX(ride_duration_min) max_ride_min,
+   (MAX(ride_duration_min)/60) max_ride_hours,
+   MIN(ride_duration_min) min_ride_min,
+   (MIN(ride_duration_min)/60) min_ride_hours,
+   MAX(ride_miles) max_ride_distance,
+   MIN(ride_miles) min_ride_distance	
+FROM 
+   cyclistic_2023    -- Modify to Q1, Q2, etc.
+GROUP BY member_casual, rideable_type
+ORDER BY member_casual, rideable_type;
+```
+
+<br>
+
+
+<br>
 
 | member_casual| rideable_type   | avg_ride_min | avg_ride_distance | max_ride_min | max_ride_hours | min_ride_min |min_ride_hours | max_ride_distance | min_ride_distance |
 |--------------|-----------------|--------------|-------------------|--------------|----------------|--------------|---------------|-------------------|-------------------|
