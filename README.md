@@ -329,8 +329,8 @@ ORDER BY member_casual, rideable_type;
 | member_casual| rideable_type   | avg_ride_min | avg_ride_distance | max_ride_min | max_ride_hours | min_ride_min |min_ride_hours | max_ride_distance | min_ride_distance |
 |--------------|-----------------|--------------|-------------------|--------------|----------------|--------------|---------------|-------------------|-------------------|
 | member       | classic_bike    | 13.93        | 1.18              | 1560         | 26.0000        | 0            | 0             | 16.03             | 0
-| member       | electric_bike   | 11.14        | 1.43              | 482          | 8.0333         | 0            | 0             | 6099.4            | 0
-| casual       | classic_bike    | 32.06        | 1.29              | 1560         | 26.0000        | 0            | 0             | 6096.86           | 0
+| member       | electric_bike   | 11.14        | 1.43              | 482          | 8.0333         | 0            | 0             | ~~6099.4~~ 25.37  | 0
+| casual       | classic_bike    | 32.06        | 1.29              | 1560         | 26.0000        | 0            | 0             | ~~6096.86~~ 20.56 | 0
 | casual       | docked_bike     | 182.81       | 1.35              | 98489        | 1641.4833      | 0            | 0             | 19.03             | 0
 | casual       | electric_bike   | 14.26        | 1.34              | 480          | 8.0000         | 0            | 0             | 30.4              | 0 
 
@@ -338,7 +338,7 @@ ORDER BY member_casual, rideable_type;
 <br>
 
 
-* Before we can even begin to analyze this data, there are some problematic data points that we need to address ASAP. 
+* Before we can even begin to analyze this data, there are some problematic data points that we need to address. 
   
   * The maximum values were surprising, to say the least. Two of our entries here are greater than `6000` miles!
 
@@ -346,7 +346,7 @@ ORDER BY member_casual, rideable_type;
     
     *  Fortunately, there were only `three` of these erroneous cases. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
     
-    *  This made the `Haversine formula` we created earlier measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America. Because this was an indisputable dataset error, I updated these three `ride_miles` entries to **NULL** values.
+    *  This made the `Haversine formula` we created earlier measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America. Because this was an indisputable dataset error, I updated these three `ride_miles` entries to **NULL** values. 
 
 * The next concerning data points were related to `docked bikes.` Given that the average ride on a docked bike is `182.8` minutes, while the longest ride distance on a docked bike 
    
