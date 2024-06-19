@@ -212,11 +212,12 @@ ORDER BY member_casual, rideable_type;
     
     * After querying the ride times in SQL, I found that well over 4000 docked bike rides were greater than the average, and one ride had even lasted a whopping `68` days!
 
-    * The most rational explanation for this is that the bike rides were never officially "ended" after having been initiated. This could be because the bikes were lost, the customer forgot to end the bike ride (or they were under the impression that the bike ride would end automatically), or perhaps because of faulty software on Cyclistic's end. In any case, without further background information regarding these issues, we cannot arrive at any definite conclusions with the data we have available. 
+    * The most rational explanation for this is that the bike rides were never officially "ended" after having been initiated. This could be because the bikes were lost, the customer forgot to end the bike ride (or they were under the impression that the bike ride would end automatically), or perhaps because of a technical error on Cyclistic's end.
 
+         * In any case, without further background information regarding these issues, we cannot arrive at any definite conclusions as to what caused these rides to last so long. 
 <br>
 
-#### * In conclusion, this issue would have to be discussed and reviewed with the rest of the Cyclistic team to determine the cause and origin of the aberrant data. 
+#### * In conclusion, this issue would have to be discussed and reviewed with the rest of the Cyclistic team in order to determine the cause and origin of the aberrant data. 
 
    
 <br>
