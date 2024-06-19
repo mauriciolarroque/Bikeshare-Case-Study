@@ -363,7 +363,7 @@ ORDER BY member_casual, rideable_type;
     
     * After querying the ride times in SQL, I found that well over 4000 docked bike rides were greater than the average, and one ride had even lasted a whopping `68` days!
 
-### In Conclusion: this issue would have to be discussed and reviewed with the rest of the Cyclistic team to determine the cause and origin of the aberrant data. 
+      * In conclusion, this issue would have to be discussed and reviewed with the rest of the Cyclistic team to determine the cause and origin of the aberrant data. 
 
    
 <br>
