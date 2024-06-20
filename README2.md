@@ -1,4 +1,4 @@
-# Part III: Further Data Cleaning, Data Processing & Data Manipulation in MySQL
+# Part III: Further Data Cleaning & Data Processing in MySQL
 
 <br>
 
@@ -498,7 +498,37 @@ WHERE ended_at REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}(:[0-9]{2})?
 
 <br>
 
-# Step 6: Running Summary Statistics to Check for Outliers
+
+# Step 6: Indexing Columns
+
+<br> 
+
+* In order to make it easier to process queries, I added a few `indexes` on certain columns. Since `ride_id` was already indexed as a primary key, the next step was to index the columns I would use most often.
+
+  * The `ride_duration_min`, `ride_month`, and `member_casual` (each rider’s membership status) columns were great candidates for indexing because they would be in the majority of queries executed during data analysis:
+
+ <br>
+
+ ```sql
+CREATE INDEX idx_ride_duration ON cyclistic_2023 (ride_duration_min); 
+
+CREATE INDEX idx_ride_month ON cyclistic_2023 (ride_month); 
+
+CREATE INDEX idx_member_status ON cyclistic_2023 (member_casual);
+```
+
+<br>
+
+* These indexes would make it more time and resource-efficient to carry out the data analysis phase of this project:
+
+   * Next up, I took a few more steps to check that all the data was ready for analysis: 
+
+<br>
+
+<br>
+
+
+# Step 7: Running Summary Statistics to Check for Outliers
 
 <br>
 
