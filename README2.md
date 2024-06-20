@@ -191,7 +191,9 @@ ALTER TABLE march_2023 ADD COLUMN ride_day CHAR(3);
 
 <br> 
 
-To add data to the empty new columns, I executed these queries:
+### To add data to the empty new columns, I executed these queries:
+
+<br>
 
 ```sql
 UPDATE january_2023 SET ride_duration_min = TIMESTAMPDIFF(MINUTE, started_at, ended_at);
@@ -208,7 +210,31 @@ UPDATE january_2023 SET ride_hour = DATE_FORMAT(started_at, "%H");
 UPDATE january_2023 SET ride_day = DATE_FORMAT(started_at, "%a");
 ```
 
+<br>
 
+These new columns would be especially useful after all the data was merged into a single table, which would be the next step in processing the bike-share data:
+
+<br>
+
+<br>
+
+* Step 4: Merging All Tables
+
+<br>
+
+* The next task was to combine all 12 tables (each of which represented a month) into a single table that covered all of Cyclistic’s 2023 bikeshare data. However, as I was preparing to merge the data, I realized that there might be some potential concerns.
+
+  * Since I had previously defined ride_id as the primary key individually in all 12 tables, this might cause complications during the merging process.
+
+    * Just to be safe, I decided to temporarily drop the primary keys in each table:
+
+
+
+
+
+<br>
+
+<br>
 
 # Step 3: Running Summary Statistics
 
