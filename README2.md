@@ -249,8 +249,6 @@ ALTER TABLE december_2023 DROP PRIMARY KEY;
 
 <br>
 
-<br>
-
 
 * With each primary key dropped, it was now totally safe to merge the tables.
 
@@ -287,8 +285,6 @@ CREATE TABLE cyclistic_2023 (
     ride_hour CHAR(2),
     ride_day CHAR(3))
 ```
-
-<br>
 
 <br>
 
