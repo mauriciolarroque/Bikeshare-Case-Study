@@ -594,7 +594,7 @@ WHERE ride_month IN ("04", "05", "06");
 
 <br>
 
-### Up Next: [Data Analysis Phase](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/README.md)
+### Up Next: [Data Analysis Phase](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/README.md#part-iv:-mysl-data-analysis)
 
 <br>
 
