@@ -350,7 +350,19 @@ cyclistic_2023
 
 <br>
 
-#### Since the total number of ride_ids (5719877) was equal to the number of unique ride_ids, I was able to confirm that all duplicates had been eliminated. Although it seemed like everything was ready, I got some surprising results when I ran some queries on the ride duration column:
+#### Since the total number of ride_ids (5719877) was equal to the number of unique ride_ids, I was able to confirm that all duplicates had been eliminated. 
+
+<br>
+
+<br>
+
+# Step 5: Cleaning Up Ride Duration Column 
+
+<br>
+
+<br>
+
+After running some queries on the ride duration column, I got some surprising results:
 
 <br>
 
@@ -392,7 +404,7 @@ WHERE started_at > ended_at
 
 <br>
 
-After checking the timestamps, I discovered that 134 rows had negative ride times. To solve this, I deleted the rows using this statement:
+After checking the timestamps, I discovered that `134 rows` had negative ride times. To solve this, I deleted the rows using this statement:
 
 <br>
 
@@ -483,9 +495,16 @@ WHERE ended_at REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}(:[0-9]{2})?
 
 <br>
 
-# Step 3: Running Summary Statistics
+# Step 6: Running Summary Statistics to Check for Outliers
 
 <br>
+
+* To get a better idea of the data ranges in the new table, I calculated some summary statistics:
+
+  <br>
+
+  <br>
+
 
 ## Max, Min, & Mean Values for Members vs. Casual Riders
 
