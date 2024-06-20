@@ -228,8 +228,86 @@ These new columns would be especially useful after all the data was merged into 
 
     * Just to be safe, I decided to temporarily drop the primary keys in each table:
 
+<br>
 
+```sql
+ALTER TABLE january_2023 DROP PRIMARY KEY;
+ALTER TABLE february_2023 DROP PRIMARY KEY;
+ALTER TABLE march_2023 DROP PRIMARY KEY;
+ALTER TABLE april_2023 DROP PRIMARY KEY;
+ALTER TABLE may_2023 DROP PRIMARY KEY;
+ALTER TABLE june_2023 DROP PRIMARY KEY;
+ALTER TABLE july_2023 DROP PRIMARY KEY;
+ALTER TABLE august_2023 DROP PRIMARY KEY;
+ALTER TABLE september_2023 DROP PRIMARY KEY;
+ALTER TABLE october_2023 DROP PRIMARY KEY;
+ALTER TABLE november_2023 DROP PRIMARY KEY;
+ALTER TABLE december_2023 DROP PRIMARY KEY;
+```
 
+<br>
+
+With each primary key dropped, it was now totally safe to merge the tables.
+
+Although we could technically work with all 12 tables at the same time, this would lead to a lot of complicated JOIN statements down the line, which would reduce overall efficiency. Therefore, to simplify the data analysis process, it was a more optimal solution to combine all 12 months of data into a single source.
+
+To do this, I created a new table - which we’ll call cyclistic_2023 - into which I could transfer all the data:
+
+<br>
+
+```sql
+CREATE TABLE cyclistic_2023 (
+    ride_id VARCHAR(16) PRIMARY KEY, -- Ride_id will be our primary key
+    rideable_type TEXT,
+    started_at DATETIME,
+    ended_at DATETIME,
+    start_station_name TEXT,      
+    start_station_id TEXT, -- Due to most station ids containing letters, we are setting text as the data type
+    end_station_name TEXT, 
+    end_station_id TEXT, 
+    start_lat DOUBLE, 
+    start_lng DOUBLE, 
+    end_lat DOUBLE, 
+    end_lng DOUBLE, 
+      member_casual ENUM('member','casual'),
+    ride_duration_min INT,
+    ride_month CHAR(2), 
+    ride_miles DOUBLE,
+    ride_hour CHAR(2),
+    ride_day CHAR(3))
+```
+
+<br>
+
+Once the table was created, I executed these statements in MySQL to transfer all the data into the new table:
+
+<br>
+
+```sql
+INSERT INTO cyclistic_2023 (ride_id, rideable_type, started_at, ended_at, start_station_name, 
+                            start_station_id, end_station_name, end_station_id, start_lat, 
+                            start_lng, end_lat, end_lng, member_casual, ride_duration_min, ride_month,
+                            ride_miles, ride_hour, ride_day)
+SELECT ride_id, rideable_type, started_at, ended_at, start_station_name, 
+        start_station_id, end_station_name, end_station_id, start_lat, 
+        start_lng, end_lat, end_lng, member_casual, ride_duration_min, ride_month, 
+    ride_miles, ride_hour, ride_day
+FROM january_2023;
+
+-- The above query selects all data from the january_2023 table and inserts it into cyclistic_2023  
+
+INSERT INTO cyclistic_2023 (ride_id, rideable_type, started_at, ended_at, start_station_name, 
+                            start_station_id, end_station_name, end_station_id, start_lat, 
+                            start_lng, end_lat, end_lng, member_casual, ride_duration_min, ride_month, 
+                            ride_miles, ride_hour, ride_day)
+SELECT ride_id, rideable_type, started_at, ended_at, start_station_name, 
+        start_station_id, end_station_name, end_station_id, start_lat, 
+        start_lng, end_lat, end_lng, member_casual, ride_duration_min, ride_month, 
+    ride_miles, ride_hour, ride_day
+FROM february_2023;
+
+-- This statement will be repeated for all twelve tables 
+```
 
 
 <br>
