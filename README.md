@@ -293,8 +293,74 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
+* Now, let's calculate the `median` data for ride duration: 
+  
 <br>
 
+## Median for Ride Duration and Ride Miles
+
+<br>
+
+```sql
+-- Change casual to member in WHERE clause to return member ride medians
+-- Change ride_duration_min to ride_miles to get ride_miles median
+
+(SELECT MAX(ride_duration_min) AS "median"
+FROM (
+ SELECT ride_duration_min,
+ NTILE(4) OVER(ORDER BY ride_duration_min) AS quartile 
+ FROM temp_q1  
+ WHERE member_casual = "casual"    -- Change to "member" as needed
+) median_table
+WHERE quartile = 2)
+UNION ALL 
+(SELECT MAX(ride_duration_min) AS "median"
+FROM (
+ SELECT ride_duration_min,
+ NTILE(4) OVER(ORDER BY ride_duration_min) AS quartile 
+ FROM temp_q2  
+ WHERE member_casual = "casual"    -- Change to "member" as needed 
+) median_table
+WHERE quartile = 2)
+UNION ALL 
+(SELECT MAX(ride_duration_min) AS "median"
+FROM (
+ SELECT ride_duration_min,
+ NTILE(4) OVER(ORDER BY ride_duration_min) AS quartile 
+ FROM temp_q3  
+ WHERE member_casual = "casual"    -- Change to "member" as needed 
+) median_table
+WHERE quartile = 2)
+UNION ALL
+(SELECT MAX(ride_duration_min) AS "median"
+FROM (
+ SELECT ride_duration_min,
+ NTILE(4) OVER(ORDER BY ride_duration_min) AS quartile 
+ FROM temp_q4   
+ WHERE member_casual = "casual"    -- Change to "member" as needed 
+) median_table
+WHERE quartile = 2);
+```
+
+<br>
+
+* During Q2 and Q3 (spring and summer), the `median` ride time for `casual` users was 13 minutes, while it was `8` minutes for Q1 and `10` minutes for Q4.
+
+  * The median results for members were slightly less, with 7 minutes in Q1, 9 minutes in Q2 and Q3, and 8 minutes in Q4.
+
+<br>
+
+* Both members and casual users show a trend of increasing ride time towards the summer months, but `casual` users have longer ride times. 
+    
+<br>
+
+* It would also be helpful to know which days of the week are most popular with members vs. casual users.
+
+<br>
+
+* This will give us a better sense of when they choose to go on rides and whether they use them for work or for recreational purposes: 
+
+<br> 
 
 ## Count of Member vs. Casual Rides Per Weekday
 
