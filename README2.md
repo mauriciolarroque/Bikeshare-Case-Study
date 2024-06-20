@@ -294,7 +294,7 @@ CREATE TABLE cyclistic_2023 (
 
 <br>
 
-Once the table was created, I executed these statements in MySQL to transfer all the data into the new table:
+#### Once the table was created, I executed these statements in MySQL to transfer all the data into the new table:
 
 <br>
 
@@ -328,6 +328,156 @@ FROM february_2023;
 -- This statement will be repeated for all twelve tables 
 ```
 
+<br>
+
+<br>
+
+#### Now that all the data was stored in a single source, I ran a few tests to ensure data integrity. This query checked for duplicate values in the ride_id column by comparing the unique ride_id values with the total number of ride_ids:
+
+<br>
+
+<br>
+
+```sql
+
+SELECT 
+    COUNT(DISTINCT ride_id) AS unique_values,
+    COUNT(ride_id) AS total_values
+FROM 
+cyclistic_2023
+```
+<br>
+
+<br>
+
+#### Since the total number of ride_ids (5719877) was equal to the number of unique ride_ids, I was able to confirm that all duplicates had been eliminated. Although it seemed like everything was ready, I got some surprising results when I ran some queries on the ride duration column:
+
+<br>
+
+<br>
+
+```sql
+SELECT
+  DISTINCT(ride_duration_min) AS ride_times,
+  member_casual,
+  ride_miles
+FROM cyclistic_2023
+WHERE ride_month = "01" AND member_casual = "member"
+```
+
+<br>
+
+<br>
+
+#### After running the above query, several ride times showed up as negative amounts of time. This was obviously an impossibility, so I executed a couple of queries to find out more details about the affected rows and count exactly how many rows had faulty ride times:
+
+<br>
+
+<br>
+
+```sql
+SELECT 
+started_at, 
+ended_at
+FROM cyclistic_2023
+WHERE started_at > ended_at; -- selecting timestamps where start time is later than the end time
+
+SELECT 
+  COUNT(ride_id)
+FROM cyclistic_2023
+WHERE started_at > ended_at
+```
+
+<br>
+
+<br>
+
+After checking the timestamps, I discovered that 134 rows had negative ride times. To solve this, I deleted the rows using this statement:
+
+<br>
+
+<br>
+
+```sql
+DELETE FROM cyclistic_2023
+WHERE ride_duration < 0;
+```
+
+<br>
+
+<br>
+
+#### Because this was such a significant error, I decided to recheck every column in the new table:
+
+<br>
+
+<br>
+
+```sql
+SELECT COUNT(ride_id) AS ride_id,
+        COUNT(rideable_type) AS rideable_type,
+        COUNT(started_at) AS started_at,
+        COUNT(ended_at) AS eneded_at,
+        COUNT(start_station_name) AS start_station_name,
+        COUNT(start_station_id) AS start_station_id,
+        COUNT(end_station_name) AS end_station_name,
+        COUNT(end_station_id) AS end_station_id,
+        COUNT(start_lat) AS start_lat,
+        COUNT(start_lng) AS start_lng,
+        COUNT(end_lat) AS end_lat,
+        COUNT(end_lng) AS end_lng,
+        COUNT(member_casual) AS member_casual,
+        COUNT(ride_duration_min) AS ride_duration_min,
+        COUNT(ride_month) AS ride_month,
+        COUNT(ride_miles) AS ride_miles,
+        COUNT(ride_hour) AS ride_hour,
+        COUNT(ride_day) AS ride_day
+    FROM cyclistic_2023
+
+-- Counting all values in each column to confirm that each column contains all expected values.
+
+SELECT 
+    COUNT(ride_id) AS count_errors
+FROM 
+    cyclistic_2023 
+WHERE ride_miles < 0;
+
+-- Selecting all rows where the distance traveled is less than zero. 
+
+
+SELECT ride_id, ride_miles
+FROM cyclistic_2023
+WHERE ride_miles NOT REGEXP '^[0-9]+(\.[0-9]{1,2})?$'; 
+
+-- Filtering for any ride distance values which may be non-numerical.
+
+
+SELECT COUNT(started_at) AS count_valid_start
+FROM cyclistic_2023
+WHERE started_at REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}(:[0-9]{2})?$';
+
+-- Confirming all values in the started_at column are DATETIME values 
+
+
+SELECT COUNT(ended_at) AS count_valid_end
+FROM cyclistic_2023
+WHERE ended_at REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}(:[0-9]{2})?$';
+
+-- Confirming all values in the ended_at column are DATETIME values
+```
+
+<br>
+
+<br>
+
+* The first query counted all of the values in each column. Fortunately, the output indicated that all columns had their expected values, minus the fields which had previously been identified as containing nulls during the initial phases of data cleaning. 
+
+  * The second query checked for any columns that had a negative ride distance, while the third used a REGEXP function to filter for any values in the ride_miles column which were non-numerical.
+    * The fourth and fifth queries also leveraged the REGEXP function to count all values in the started_at and ended_at columns which were in YYYY-MM-DD HH:MM:SS format.
+
+<br>
+
+#### The next step was to run some summary statistics to check out how the data in the new table looked: 
 
 <br>
 
@@ -381,7 +531,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-* Before we can even begin to analyze this data, there are some problematic data points that we need to address. 
+* From these results, several red flags popped up. There were a lot of problematic data points that needed to be addressed before moving forward.
   
   * The maximum values were surprising, to say the least. Two of our entries here are greater than `6000` miles!
 
@@ -414,6 +564,10 @@ ORDER BY member_casual, rideable_type;
 <br>
 
 <br> 
+
+<br>
+
+### Now that all the data cleaning was done, it was time to create temporary tables that would streamline the analysis process: 
 
 <br>
 
