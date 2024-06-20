@@ -577,7 +577,8 @@ ORDER BY member_casual, rideable_type;
 
     * The most rational explanation for this is that the bike rides were never officially "ended" after having been initiated. This could be because the bikes were lost, the customer forgot to end the bike ride (or they were under the impression that the bike ride would end automatically), or perhaps because of a technical error on Cyclistic's end.
 
-         * In any case, without further background information regarding these issues, we cannot arrive at any definite conclusions as to what caused these rides to last so long. 
+         * In any case, without further background information regarding these issues, we cannot arrive at any definite conclusions as to what caused these rides to last so long.
+           
 <br>
 
 #### * In conclusion, this issue would have to be discussed and reviewed with the rest of the Cyclistic team in order to determine the cause and origin of the aberrant data. 
@@ -589,7 +590,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-### Now that all the data cleaning was done, it was time to create some temporary tables for each quarter and then move on to the data analysis phase 🙌🙌:
+### Now that all the data cleaning was done, it was time to create some temporary tables for each quarter and then move on to the data analysis phase 🙌:
 
 <br>
 
