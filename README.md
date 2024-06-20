@@ -164,8 +164,6 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
-* Now, we're getting to the fun part of this project.
-
   * Our original business question was to find out `how member behavior differs from casual rider behavior.` So, to kick things off, let's see `how many rides` are attributed to annual members vs. casual riders.
 
     * We'll also be taking the percentages of each category of user – as well as dividing the data by quarterly results – to get a more complete picture of what's going on:
@@ -238,14 +236,16 @@ FROM ride_counts;
   * Although the number of member rides also increases – and the number of member rides indeed remains greater than casual rides throughout each quarter – this difference is notably less pronounced. Likewise, the percentages show that the gap between member and casual usage significantly narrows during Q2 and Q3. 
 
     * This suggests that `seasonality` plays a key role in the difference between casual rider and member behavior; members make up the bulk of winter/fall bike rides, while casual users become much more active during tourist season.
+   
+<br>
 
-### Next, let's look at some summary statistics:
+#### Next, let's review summary statistics for the whole table:
 
 <br>
 
 <br>
 
-# Max, Min, and Mean Values for Members vs. Casual Riders
+## Max, Min, and Mean Values for Members vs. Casual Riders
 
 <br>
 
@@ -271,7 +271,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-## Output (Scroll Right): 
+### Output (Scroll Right): 
 
 | member_casual| rideable_type   | avg_ride_min | avg_ride_distance | max_ride_min | max_ride_hours | min_ride_min |min_ride_hours | max_ride_distance | min_ride_distance |
 |--------------|-----------------|--------------|-------------------|--------------|----------------|--------------|---------------|-------------------|-------------------|
@@ -296,7 +296,7 @@ ORDER BY member_casual, rideable_type;
 <br>
 
 
-# Count of Member vs. Casual Rides Per Weekday
+## Count of Member vs. Casual Rides Per Weekday
 
 <br>
 
@@ -311,6 +311,7 @@ WITH ride_counts AS (
     FROM cyclistic_2023
     GROUP BY member_casual, ride_day
 ),
+		-- This CTE counts the number of rides during each weekday
 
 total_rides AS (
     SELECT
@@ -320,6 +321,8 @@ total_rides AS (
     GROUP BY member_casual
 )
 
+	-- This CTE counts the total number of rides for each member category
+
 SELECT
     rc.member_casual,
     rc.ride_day,
@@ -327,14 +330,14 @@ SELECT
     tr.total_rides,
     ROUND((rc.number_of_rides * 100.0 / tr.total_rides),2) AS percent_of_total_rides
 FROM ride_counts rc
-JOIN total_rides tr
+JOIN total_rides tr                        -- We'll use a JOIN statement so we can get the percentage of rides on each weekday
     ON rc.member_casual = tr.member_casual
-ORDER BY rc.member_casual, rc.ride_day;
+ORDER BY rc.member_casual, rc.ride_day; 
 ```
 
 <br>
 
-## Output (Full-Year 2023):
+### Output (Full-Year 2023):
 
 | member_casual | ride_day | number_of_rides | total_rides    | percent_of_total_rides  |
 |---------------|----------|-----------------|----------------|-------------------------|
@@ -373,7 +376,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
- * When adjusted for `Q1` ([full data here](Q1-01.md)), Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday.
+ * When adjusted for `Q1` ([Q1 data here](Q1-01.md)), Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday.
 
    * This raises the possibility that casual users in the off-season tend to use bike rides for their routine commute more often than for recreational purposes.
 
@@ -387,9 +390,105 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-#### * Overall, we can deduce from this data that weekends were most popular with casual riders (particularly during the spring and summer months) while weekdays were the most popular ride days for members. 
+To dive deeper into these trends, we can use the query below to figure out which `hours of the day` are most popular to start rides: 
 
 <br>
+
+<br>
+
+<!--  * Overall, we can deduce from this data that `weekends` were most popular with casual riders (particularly during the spring and summer months) while weekdays were the most popular ride days for members. -->
+
+## How Many Rides per Member Category Occur at Different Times of Day
+
+<br>
+
+```sql
+WITH ride_hour_counts AS (
+SELECT
+	member_casual,
+    ride_hour,
+   COUNT(ride_id) AS number_of_rides
+FROM cyclistic_2023
+WHERE ride_month IN ("01", "02", "03")
+GROUP BY member_casual, ride_hour
+ORDER BY  member_casual, ride_hour),
+
+total_rides AS (
+SELECT 
+	member_casual,
+	SUM(number_of_rides) AS total_rides 
+FROM ride_hour_counts
+GROUP BY member_casual)
+
+SELECT 
+	rhc.member_casual,
+    rhc.number_of_rides,
+    ride_hour,
+    tr.total_rides,
+    ROUND((rhc.number_of_rides/tr.total_rides *100),2) AS ride_count_percentage
+FROM ride_hour_counts rhc
+JOIN total_rides tr ON rhc.member_casual = tr.member_casual
+ORDER BY rhc.member_casual, rhc.ride_hour;
+
+
+-- QUERY: Insights on Hourly Percentages 
+
+WITH ride_hour_counts AS (
+SELECT
+	member_casual,
+    ride_hour,
+   COUNT(ride_id) AS number_of_rides
+FROM cyclistic_2023
+WHERE ride_month BETWEEN "06" AND "08"
+GROUP BY member_casual, ride_hour
+ORDER BY  member_casual, ride_hour),
+
+total_rides AS (
+SELECT 
+	member_casual,
+	SUM(number_of_rides) AS total_rides 
+FROM ride_hour_counts
+GROUP BY member_casual),
+
+hourly_percentages AS (
+SELECT 
+	rhc.member_casual,
+    rhc.number_of_rides,
+    ride_hour,
+    tr.total_rides,
+    (rhc.number_of_rides/tr.total_rides *100) AS ride_count_percentage
+FROM ride_hour_counts rhc
+JOIN total_rides tr ON rhc.member_casual = tr.member_casual
+ORDER BY rhc.member_casual, rhc.ride_hour
+) 
+
+SELECT 
+	member_casual,
+	ROUND(SUM(ride_count_percentage),1) AS percentage
+FROM 
+	hourly_percentages
+WHERE ride_hour IN ("22", "23", "00", "01", "02")
+GROUP BY member_casual;
+```
+
+<br>
+
+<br>
+
+* During morning commute hours (6:00AM to 8:59AM), `7%` of casual users started rides, compared to `14.4%` of members. Members also had a slighty higher percentage of rides from 4:00pm to 5:59PM, which is the end of a typical workday. 
+
+  * From 11:00AM to 4:59 PM, `40.3%` of rides started were casual users, while members lagged slightly behind at `35.2%`
+
+    * Casual users also seemed to favor `late night` rides. `10%` started rides between 10:00PM and 2:59AM, compared to `6.4%` in the member category.
+
+
+<br>
+
+* Overall, we can deduce from this data that `weekends` were most popular with casual riders, weekdays were most popular with member riders, casual riders tend to ride bikes more often outside of working hours, and members are more active than casual riders during the hours that people usually `commute` to and from work.
+
+<br>
+
+<br> 
 
 
 
