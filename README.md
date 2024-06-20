@@ -297,7 +297,7 @@ ORDER BY member_casual, rideable_type;
   
 <br>
 
-## Median for Ride Duration and Ride Miles
+## Median for Ride Duration
 
 <br>
 
