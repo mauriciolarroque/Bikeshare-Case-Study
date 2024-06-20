@@ -354,7 +354,9 @@ WHERE quartile = 2);
     
 <br>
 
-* It would also be helpful to know which days of the week are most popular with members vs. casual users.
+<br>
+
+#### * Now that we've gotten these insights, it would also be helpful to know which days of the week are most popular with members vs. casual users.
 
 <br>
 
@@ -550,7 +552,7 @@ GROUP BY member_casual;
 
 <br>
 
-* Overall, we can deduce from this data that `weekends` were most popular with casual riders, weekdays were most popular with member riders, casual riders tend to ride bikes more often outside of working hours, and members are more active than casual riders during the hours that people usually `commute` to and from work.
+* Overall, we can deduce from this data that `weekends` were most popular with casual riders, weekdays were most popular with member riders, casual riders tend to ride bikes more often outside of working hours, and members are more active than casual riders during the times that people usually `commute` to and from work.
 
 <br>
 
