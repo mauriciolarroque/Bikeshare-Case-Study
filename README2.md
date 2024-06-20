@@ -594,7 +594,7 @@ WHERE ride_month IN ("04", "05", "06");
 
 <br>
 
-### Up Next: [Data Analysis Phase] (#Part-IV:-MySQL-Data-Analysis)
+### Up Next: [Data Analysis Phase] (#part-iv:-mysql-data-analysis)
 
 <br>
 
