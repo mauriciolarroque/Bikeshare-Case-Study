@@ -1,4 +1,4 @@
-# Part III: Further Data Cleaning & Data Processing in MySQL
+# Part III: Further Data Cleaning, Data Processing & Data Manipulation in MySQL
 
 <br>
 
@@ -115,7 +115,7 @@ After confirming that all the `ride_ids` were unique, I moved on to processing t
 
 <br>
 
-# Step 2: Reviewing All Tables 
+# Step 2: Changing Data Types
 
 <br>
 
@@ -128,7 +128,7 @@ DESCRIBE january_2023; -- And february_2023, march_2023, etc.
 
 <br> 
 
-• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to DATETIME format: 
+• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format: 
 
 ```sql
 ALTER TABLE february_2023
@@ -138,9 +138,77 @@ MODIFY COLUMN ended_at DATETIME;
 
 <br>
 
-<br>
+Also, given that the `member_casual` column only had two values, I changed it to `ENUM` in order to maximize database efficiency: 
 
 <br>
+
+```sql
+ALTER TABLE february_2023
+MODIFY COLUMN member_casual ENUM('member', 'casual') NOT NULL;
+```
+
+<br>
+
+# Step 3: Adding New Columns 
+
+<br>
+
+These columns would contain how many `minutes` each ride lasted, which `month` the ride took place in, how many `miles` were covered during the ride, which `hour` of the day the ride took place in, and which `day of the week` the ride took place in:
+
+```sql
+ALTER TABLE january_2023 ADD COLUMN ride_duration_min INT;
+
+ALTER TABLE january_2023 ADD COLUMN ride_month CHAR(2);
+
+ALTER TABLE january_2023 ADD COLUMN ride_miles DOUBLE; 
+
+ALTER TABLE january_2023 ADD COLUMN ride_hour CHAR(2);
+
+ALTER TABLE january_2023 ADD COLUMN ride_day CHAR(3);
+
+
+ALTER TABLE february_2023 ADD COLUMN ride_duration_min INT;
+
+ALTER TABLE february_2023 ADD COLUMN ride_month CHAR(2);
+
+ALTER TABLE february_2023 ADD COLUMN ride_miles DOUBLE;
+
+ALTER TABLE february_2023 ADD COLUMN ride_hour CHAR(2);
+
+ALTER TABLE february_2023 ADD COLUMN ride_day CHAR(3);
+
+
+ALTER TABLE march_2023 ADD COLUMN ride_duration_min INT;
+
+ALTER TABLE march_2023 ADD COLUMN ride_month CHAR(2);
+
+ALTER TABLE march_2023 ADD COLUMN ride_miles DOUBLE; 
+
+ALTER TABLE march_2023 ADD COLUMN ride_hour CHAR(2);
+
+ALTER TABLE march_2023 ADD COLUMN ride_day CHAR(3);
+```
+
+<br> 
+
+To add data to the empty new columns, I executed these queries:
+
+```sql
+UPDATE january_2023 SET ride_duration_min = TIMESTAMPDIFF(MINUTE, started_at, ended_at);
+
+UPDATE january_2023 SET ride_month = DATE_FORMAT(started_at, "%m"); 
+
+UPDATE january_2023 SET ride_miles = ROUND((3959 * acos(
+        cos(radians(start_lat)) * cos(radians(end_lat)) * cos(radians(end_lng) - radians(start_lng)) +
+        sin(radians(start_lat)) * sin(radians(end_lat))
+    )),2); -- Calculates the distance (in miles) between the start and end station coordinates
+
+UPDATE january_2023 SET ride_hour = DATE_FORMAT(started_at, "%H");
+
+UPDATE january_2023 SET ride_day = DATE_FORMAT(started_at, "%a");
+```
+
+
 
 # Step 3: Running Summary Statistics
 
