@@ -294,7 +294,7 @@ CREATE TABLE cyclistic_2023 (
 
 <br>
 
-#### Once the table was created, I executed these statements in MySQL to transfer all the data into the new table:
+* Once the table was created, I executed these statements in MySQL to `transfer` all the data into the new table:
 
 <br>
 
@@ -332,7 +332,7 @@ FROM february_2023;
 
 <br>
 
-#### Now that all the data was stored in a single source, I ran a few tests to ensure data integrity. This query checked for duplicate values in the ride_id column by comparing the unique ride_id values with the total number of ride_ids:
+* Now that all the data was stored in a single source, I ran a few tests to ensure `data integrity`. This query checked for `duplicate` values in the ride_id column by comparing the unique ride_id values with the total number of ride_ids:
 
 <br>
 
@@ -350,7 +350,7 @@ cyclistic_2023
 
 <br>
 
-#### Since the total number of ride_ids (5719877) was equal to the number of unique ride_ids, I was able to confirm that all duplicates had been eliminated. 
+* Since the total number of ride_ids (`5719877`) was `equal` to the number of unique ride_ids, I was able to confirm that all duplicates had been eliminated. 
 
 <br>
 
@@ -362,7 +362,7 @@ cyclistic_2023
 
 <br>
 
-After running some queries on the ride duration column, I got some surprising results:
+After running some queries on the `ride duration` column, I got some surprising results:
 
 <br>
 
@@ -381,7 +381,9 @@ WHERE ride_month = "01" AND member_casual = "member"
 
 <br>
 
-#### After running the above query, several ride times showed up as negative amounts of time. This was obviously an impossibility, so I executed a couple of queries to find out more details about the affected rows and count exactly how many rows had faulty ride times:
+* After running the above query, several ride times showed up as `negative` amounts of time.
+
+  * This was obviously an impossibility, so I executed a couple of queries to find out more details about the affected rows and count exactly how many rows had faulty ride times:
 
 <br>
 
@@ -419,7 +421,7 @@ WHERE ride_duration < 0;
 
 <br>
 
-#### Because this was such a significant error, I decided to recheck every column in the new table:
+* Because this was such a significant error, I decided to recheck every column in the new table:
 
 <br>
 
@@ -484,8 +486,9 @@ WHERE ended_at REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}(:[0-9]{2})?
 
 * The first query counted all of the values in each column. Fortunately, the output indicated that all columns had their expected values, minus the fields which had previously been identified as containing nulls during the initial phases of data cleaning. 
 
-  * The second query checked for any columns that had a negative ride distance, while the third used a REGEXP function to filter for any values in the ride_miles column which were non-numerical.
-    * The fourth and fifth queries also leveraged the REGEXP function to count all values in the started_at and ended_at columns which were in YYYY-MM-DD HH:MM:SS format.
+  * The second query checked for `any columns` that had a negative ride distance, while the third used a `REGEXP` function to filter for any values in the ride_miles column which were non-numerical.
+    
+    * The fourth and fifth queries also leveraged the REGEXP function to count all values in the started_at and ended_at columns which were in `YYYY-MM-DD HH:MM:SS` format.
 
 <br>
 
