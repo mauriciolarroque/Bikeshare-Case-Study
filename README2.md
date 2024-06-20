@@ -218,15 +218,17 @@ These new columns would be especially useful after all the data was merged into 
 
 <br>
 
-* Step 4: Merging All Tables
+# Step 4: Merging All Tables
 
 <br>
 
-* The next task was to combine all 12 tables (each of which represented a month) into a single table that covered all of Cyclistic’s 2023 bikeshare data. However, as I was preparing to merge the data, I realized that there might be some potential concerns.
+* The next task was to `combine all 12 tables` (each of which represented a month) into a single table that covered all of Cyclistic’s 2023 bikeshare data. However, as I was preparing to merge the data, I realized that there might be some potential concerns.
 
   * Since I had previously defined ride_id as the primary key individually in all 12 tables, this might cause complications during the merging process.
 
-    * Just to be safe, I decided to temporarily drop the primary keys in each table:
+    * Just to be safe, I decided to temporarily `drop the primary keys` in each table:
+
+<br>
 
 <br>
 
@@ -247,11 +249,19 @@ ALTER TABLE december_2023 DROP PRIMARY KEY;
 
 <br>
 
-With each primary key dropped, it was now totally safe to merge the tables.
+<br>
 
-Although we could technically work with all 12 tables at the same time, this would lead to a lot of complicated JOIN statements down the line, which would reduce overall efficiency. Therefore, to simplify the data analysis process, it was a more optimal solution to combine all 12 months of data into a single source.
+<br>
 
-To do this, I created a new table - which we’ll call cyclistic_2023 - into which I could transfer all the data:
+* With each primary key dropped, it was now totally safe to merge the tables.
+
+  * Although we could technically work with all 12 tables at the same time, this would lead to a lot of complicated JOIN statements down the line, which would reduce overall efficiency. 
+
+     * Therefore, to simplify the data analysis process, it was a more optimal solution to combine all 12 months of data into a single source.
+
+#### To do this, I created a new table - which we’ll call `cyclistic_2023` - into which I could transfer all the data:
+
+<br>
 
 <br>
 
