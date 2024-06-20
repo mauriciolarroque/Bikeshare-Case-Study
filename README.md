@@ -118,6 +118,10 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
+![Sql_data_base_with_logo 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/c198b878-c74d-4157-bc2c-6130ec576e3b)
+
+<br>
+
 > [!IMPORTANT]
 > For a `complete breakdown` of all the different data processing, data manipulation and data definition tasks I carried out in MySQL, **[check out](README2.md) this page here.**
    
