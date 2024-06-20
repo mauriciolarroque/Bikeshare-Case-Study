@@ -198,12 +198,18 @@ ALTER TABLE march_2023 ADD COLUMN ride_day CHAR(3);
 ```sql
 UPDATE january_2023 SET ride_duration_min = TIMESTAMPDIFF(MINUTE, started_at, ended_at);
 
+      -- Calculates ride duration by taking the difference in minutes of the started_at and ended_at columns 
+
 UPDATE january_2023 SET ride_month = DATE_FORMAT(started_at, "%m"); 
+
+      -- ride_month is equal to the two-digit numerical month associated with the value in the started_at column
 
 UPDATE january_2023 SET ride_miles = ROUND((3959 * acos(
         cos(radians(start_lat)) * cos(radians(end_lat)) * cos(radians(end_lng) - radians(start_lng)) +
         sin(radians(start_lat)) * sin(radians(end_lat))
-    )),2); -- Calculates the distance (in miles) between the start and end station coordinates
+    )),2);
+
+      -- Applies the Haversine formula to calculate the distance (in miles) between the start and end station coordinates
 
 UPDATE january_2023 SET ride_hour = DATE_FORMAT(started_at, "%H");
 
