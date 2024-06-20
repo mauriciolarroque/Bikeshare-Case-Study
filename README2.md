@@ -567,10 +567,32 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-### Now that all the data cleaning was done, it was time to create temporary tables that would streamline the analysis process: 
+### Now that all the data cleaning was done, it was time to create some temporary tables for each quarter and then move on to the data analysis phase 🙌🙌:
 
 <br>
 
+<br>
+
+```sql
+CREATE TEMPORARY TABLE temp_q1
+SELECT 
+    *
+FROM cyclistic_2023
+WHERE ride_month IN ("01", "02", "03");
+
+
+CREATE TEMPORARY TABLE temp_q2
+SELECT 
+    *
+FROM cyclistic_2023
+WHERE ride_month IN ("04", "05", "06");
+
+-- Repeat process for the following quarters 
+```
+
+<br>
+
+<br>
 
 
 
