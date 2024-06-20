@@ -206,25 +206,6 @@ End Sub
 
 <br>
 
-## Creating `Temporary Tables` for Q1-Q4:
-
-```sql
-CREATE TEMPORARY TABLE temp_q1
-SELECT 
-    *
-FROM cyclistic_2023
-WHERE ride_month IN ("01", "02", "03");
-
-
-CREATE TEMPORARY TABLE temp_q2
-SELECT 
-    *
-FROM cyclistic_2023
-WHERE ride_month IN ("04", "05", "06");
-
--- Repeat process for the following quarters 
-```
-
 <br>
 
 # Count of Annual Member vs. Casual User Rides (Full Year and Q1-Q4)
@@ -337,43 +318,14 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-### Part I: Addressing Outliers and Possible Errors 
+<br>
+
+ * On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there was only a slight difference between both groups. In terms of miles traveled, both members and casual riders travel about the same distance on an average trip.
+
 
 <br>
 
-* Before we can even begin to analyze this data, there are some problematic data points that we need to address. 
-  
-  * The maximum values were surprising, to say the least. Two of our entries here are greater than `6000` miles!
-
-    * Since 6000 miles seems excessive (given that this is more than half the length of North America), I decided to investigate these cases.
-    
-    *  Fortunately, there were only `three` of these erroneous entries. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
-    
-    *  This caused the `Haversine formula` we used earlier to measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America.
-
-       * Because this was unquestionably a dataset error (unless users ended their bike trip in the middle of the ocean), I updated these three `ride_miles` entries to **NULL** values.
-         
 <br>
-
-<br>
-
-* The next concerning data points were related to `docked bikes.`
-
-  * Given that the average ride time on a docked bike was `182.8` minutes – while the longest ride distance on a docked bike was only about 19 miles – the data points were not adding up.
-    
-    * After querying the ride times in SQL, I found that well over 4000 docked bike rides were greater than the average, and one ride had even lasted a whopping `68` days!
-
-      * In conclusion, this issue would have to be discussed and reviewed with the rest of the Cyclistic team to determine the cause and origin of the aberrant data. 
-
-   
-<br>
-
-<br>
-
-<!-- * On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there was only a slight difference between both groups. In terms of miles traveled, both members and casual riders travel about the same distance on an average trip. --> 
-
-
-
 
 
 # Count of Member vs. Casual Rides Per Weekday
