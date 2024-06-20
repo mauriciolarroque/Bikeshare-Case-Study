@@ -89,6 +89,10 @@ Each one of the 12 datasets (one for each month) contained **13 columns**, which
 
 <br>
 
+<br>
+
+<br>
+
 # Part II: Data Cleaning
 
 <br>
@@ -114,6 +118,10 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
+<br>
+
+<br>
+
 # Part III: Data Processing in MySQL
 
 <br>
@@ -125,6 +133,22 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 > [!IMPORTANT]
 > For a `complete breakdown` of all the different data processing, data manipulation and data definition tasks I carried out in MySQL, **[check out](README2.md) this page here.**
    
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
 <br>
 
 <br>
