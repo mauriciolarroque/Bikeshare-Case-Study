@@ -350,7 +350,7 @@ WHERE quartile = 2);
 
 <br>
 
-* Both members and casual users show a trend of increasing ride time towards the summer months, but `casual` users have longer ride times. 
+* Both members and casual users show a trend of increasing ride time towards the summer months, but `casual` users have longer ride times throughout the year. 
     
 <br>
 
