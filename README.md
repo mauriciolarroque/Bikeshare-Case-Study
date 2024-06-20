@@ -153,9 +153,6 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
-<br>
-
-<br>
 
 # Part IV: MySQL Data Analysis
 
