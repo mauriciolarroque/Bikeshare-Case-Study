@@ -83,9 +83,16 @@ Each one of the 12 datasets (one for each month) contained **13 columns**, which
 
 <br>
 
+<br>
+
+<br>
+
+<br>
+
 # Part II: Data Cleaning
 
 <br>
+
 
 ## Excel Data Cleaning 
 ![Microsoft_Office_Excel_(2019–present) 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/09220318-e788-4161-a9fa-16114d470271)
@@ -99,7 +106,13 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 ### Link Here: [Data Cleaning Excel Full Steps](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/Data-Cleaning.md)
 
+<br>
 
+<br>
+
+<br>
+
+<br>
 
 # Part III: Data Processing in MySQL
 
