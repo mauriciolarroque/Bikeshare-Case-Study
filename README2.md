@@ -251,7 +251,6 @@ ALTER TABLE december_2023 DROP PRIMARY KEY;
 
 <br>
 
-<br>
 
 * With each primary key dropped, it was now totally safe to merge the tables.
 
@@ -260,6 +259,8 @@ ALTER TABLE december_2023 DROP PRIMARY KEY;
      * Therefore, to simplify the data analysis process, it was a more optimal solution to combine all 12 months of data into a single source.
 
 #### To do this, I created a new table - which we’ll call `cyclistic_2023` - into which I could transfer all the data:
+
+<br>
 
 <br>
 
@@ -289,7 +290,13 @@ CREATE TABLE cyclistic_2023 (
 
 <br>
 
+<br>
+
 Once the table was created, I executed these statements in MySQL to transfer all the data into the new table:
+
+<br>
+
+<br>
 
 <br>
 
