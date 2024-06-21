@@ -638,6 +638,10 @@ LIMIT 10;
 
 ### Map View: Clinton St & Washington Blvd 
 
+![Screenshot 2024-06-20 at 5 11 11 PM 1 (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/df65abb1-2d6f-4219-acdf-02495f239e07)
+
+<br>
+
 
 
 
