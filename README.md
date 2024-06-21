@@ -589,7 +589,7 @@ LIMIT 10;
 
 <br>
 
-### Output: 
+### Casual User Output: 
  
  |           start_station_name       | number_of_rides |
  -------------------------------------|------------------
@@ -608,17 +608,35 @@ LIMIT 10;
 
 <br>
 
+### Map View: Streeter Dr. & Grand Ave. 
+
 ![Screenshot 2024-06-20 at 5 15 05 PM 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/d2b2f829-bc5b-4f86-948d-e101b1a56b8c)
 
 
 <br>
 
-* As we can see, the most popular station for casual users (`Streeter Dr. & Grand Ave.`) is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. 
+* As we can see, the most popular station for casual users (`Streeter Dr. & Grand Ave.`) is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. All of the other start stations are also near the waterfront, near hotels or next to other popular tourist attractions throughout the city.
 
-
+  * Now, let's check out results for `members`:
 
 <br>
 
+| start_station_name                    | number_of_rides |
+|---------------------------------------|-----------------|
+| Clinton St & Washington Blvd          | 26216           |
+| Kingsbury St & Kinzie St              | 26172           |
+| Clark St & Elm St                     | 25001           |
+| Wells St & Concord Ln                 | 21419           |
+| Clinton St & Madison St               | 20596           |
+| Wells St & Elm St                     | 20400           |
+| University Ave & 57th St              | 20038           |
+| Broadway & Barry Ave                  | 18959           |
+| Loomis St & Lexington St              | 18901           |
+| State St & Chicago Ave                | 18485           |
+
+<br>
+
+### Map View: Clinton St & Washington Blvd 
 
 
 
