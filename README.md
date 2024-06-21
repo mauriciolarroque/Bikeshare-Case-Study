@@ -613,7 +613,7 @@ LIMIT 10;
 
 <br>
 
-* As we can see, the most popular station for casual users is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. 
+* As we can see, the most popular station for casual users (`Streeter Dr. & Grand Ave.`) is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. 
 
 
 
