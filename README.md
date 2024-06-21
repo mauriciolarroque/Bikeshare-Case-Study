@@ -556,11 +556,15 @@ GROUP BY member_casual;
 
 <br>
 
-### Finally, let's find out which start stations are most popular with members and casual users: 
+* Finally, let's find out which start stations are most popular with members and casual users: 
 
 <br>
 
 <br> 
+
+## Top 10 Start Stations for Each User Category
+
+<br>
 
 ```sql
 
@@ -585,13 +589,30 @@ LIMIT 10;
 
 <br>
 
-### Casual User Most Popular Station: Streeter Dr & Grand Ave
+### Output: 
+ 
+ |           start_station_name       | number_of_rides |
+ --------------------------------------------------------
+ |Streeter Dr & Grand Ave             | 46030
+ |DuSable Lake Shore Dr & Monroe St   | 30487
+ |Michigan Ave & Oak St               | 22664
+ |DuSable Lake Shore Dr & North Blvd  | 20338
+ |Millennium Park                     | 20227
+ |Shedd Aquarium                      | 17781
+ |Theater on the Lake                 | 16359
+ |Dusable Harbor                      | 15491
+ |Wells St & Concord Ln               | 12171
+ |Montrose Harbor                     | 11987
+
+
 
 <br>
 
+![Uploading Screenshot 2024-06-20 at 5.15.05 PM.png…]()
 
+<br>
 
-
+* As we can see, the most popular station for casual users is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. 
 
 
 
