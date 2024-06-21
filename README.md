@@ -592,7 +592,7 @@ LIMIT 10;
 ### Output: 
  
  |           start_station_name       | number_of_rides |
- --------------------------------------------------------
+ -------------------------------------|------------------
  |Streeter Dr & Grand Ave             | 46030
  |DuSable Lake Shore Dr & Monroe St   | 30487
  |Michigan Ave & Oak St               | 22664
