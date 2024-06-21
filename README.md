@@ -452,7 +452,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 * During `Q2` and `Q3`, however, we can see an uptick in the number of weekend rides among both member and casual users, although the increase is significantly more prominent among casual users.
 
-  * `35.9%` of casual rides in Q2 took place on the weekend, and this number steadily increased to `38.2%` for all of Q3.
+  * `35.9%` of casual rides in Q2 took place on the weekend, and this number steadily increased to `38.2%` during Q3.
 
 <br>
 
