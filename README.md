@@ -348,15 +348,13 @@ WHERE quartile = 2);
 
   * The median results for members were slightly less, with 7 minutes in Q1, 9 minutes in Q2 and Q3, and 8 minutes in Q4.
 
-<br>
-
 * Both members and casual users show a trend of increasing ride time towards the summer months, but `casual` users have longer ride times throughout the year. 
     
 <br>
 
 <br>
 
-#### * Now that we've gotten these insights, it would also be helpful to know which days of the week are most popular with members vs. casual users.
+### * Now that we've gotten these insights, it would also be helpful to know which days of the week are most popular with members vs. casual users.
 
 <br>
 
@@ -556,7 +554,48 @@ GROUP BY member_casual;
 
 <br>
 
+<br>
+
+### Finally, let's find out which start stations are most popular with members and casual users: 
+
+<br>
+
 <br> 
+
+```sql
+
+-- This query returns the top 10 start stations associated with the most ride ids
+
+SELECT 
+	start_station_name,
+    COUNT(ride_id) AS "number_of_rides"
+FROM 
+	(SELECT
+		start_station_name, 
+        ride_id,
+        member_casual
+	FROM cyclistic_2023
+	WHERE start_station_name IS NOT NULL
+    AND member_casual = "casual"    -- Change to member for member results
+	) start_stations
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+```
+
+<br>
+
+### Casual User Most Popular Station: Streeter Dr & Grand Ave
+
+<br>
+
+
+
+
+
+
+
+<br>
 
 
 
