@@ -608,6 +608,7 @@ LIMIT 10;
 
 <br>
 
+![Screenshot 2024-06-20 at 5 15 05 PM 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/d2b2f829-bc5b-4f86-948d-e101b1a56b8c)
 
 
 <br>
