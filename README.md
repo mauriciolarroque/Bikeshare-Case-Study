@@ -638,9 +638,14 @@ LIMIT 10;
 
 ### Map View: Clinton St & Washington Blvd 
 
-![Screenshot 2024-06-20 at 5 11 11 PM 1 (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/df65abb1-2d6f-4219-acdf-02495f239e07)
+![Screenshot 2024-06-20 at 5 11 11 PM 2](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/79913b65-d07c-49e7-8691-1b33ecd165d7)
+
 
 <br>
+
+* The top start station for members is located near the freeway and several commercial buildings. Unlike casual users, rides that are attributed to members don't have the same tendency to circulate around tourist areas. It seems as if their rides are for more routine purposes, such as running errands, getting home, and going to work.
+
+  
 
 
 
