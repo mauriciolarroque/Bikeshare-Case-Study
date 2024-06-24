@@ -201,7 +201,9 @@ FROM ride_counts;
 
 <br>
 
-## Output: 
+<br>
+
+### Output: 
 
 | count_of_casual_rides_2023 | count_of_member_rides_2023  | percent_casual_rides_2023 | percent_member_rides_2023 |
 |----------------------------|-----------------------------|---------------------------|---------------------------|
@@ -241,11 +243,15 @@ FROM ride_counts;
 
 ### Key Takeaways
 
-   1. `Members` go on more rides than casual users.
+<br>
+
+<br>
+
+   1. In total, `members` go on more rides than casual users.
       
    2. `Casual` rides increase sharply during spring and summer.
 
-    * This suggests that `seasonality` plays a key role in the difference between casual rider and member behavior; members make up the bulk of winter/fall bike rides, while casual users become much more active during tourist season.
+   3. Member rides also increase towards the summer months, but `not` as dramatically as casual rides. 
    
 <br>
 
@@ -302,6 +308,10 @@ ORDER BY member_casual, rideable_type;
 
 
 <br>
+
+<br>
+
+### Key Takeaways
 
 * Now, let's calculate the `median` data for ride duration: 
   
