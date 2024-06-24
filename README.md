@@ -643,7 +643,7 @@ LIMIT 10;
 
 <br>
 
-* The top start station for members is located near the freeway and several commercial buildings. Unlike casual users, rides that are attributed to members don't have the same tendency to circulate around tourist areas. It seems as if their rides are for more routine purposes, such as running errands, getting home, and going to work.
+* The top start station for members (`Clinton St. & Washington Blvd`) is located near the freeway and several commercial buildings. Unlike casual users, rides that are attributed to members don't have the same tendency to circulate around tourist areas. It seems as if their rides are for more routine purposes, such as running errands, getting home, and going to work.
 
   
 
