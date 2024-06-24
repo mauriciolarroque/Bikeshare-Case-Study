@@ -241,11 +241,12 @@ FROM ride_counts;
 
   * Although the number of member rides also increases – and the number of member rides indeed remains greater than casual rides throughout each quarter – this difference is notably less pronounced. Likewise, the percentages show that the gap between member and casual usage significantly narrows during Q2 and Q3.
 
+<br>
+
 ### Key Takeaways
 
 <br>
 
-<br>
 
    1. In total, `members` go on more rides than casual users.
       
