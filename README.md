@@ -383,7 +383,15 @@ WHERE quartile = 2);
 
 <br>
 
-### * Now that we've gotten these insights, it would also be helpful to know which days of the week are most popular with members vs. casual users.
+### Key Takeaways
+
+  1. The median ride times for member and casual users revealed `longer` ride times for casual users than members.
+
+  2. This corroborates the data taken from the summary statistics that we previously analyzed.
+
+<br>
+
+Now that we've gotten these insights, it would also be helpful to know which days of the week are most popular with members vs. casual users.
 
 <br>
 
@@ -583,6 +591,19 @@ GROUP BY member_casual;
 
     * Casual users also seemed to favor `late night` rides. `10%` started rides between 10:00PM and 2:59AM, compared to `6.4%` in the member category.
 
+<br>
+
+<br>
+
+### Key Takeaways 
+
+  1. `Casual` riders tend to favor `late night` rides more than members.
+
+  2. Members are more active than casual users during typical `morning commute` hours.
+
+  3. Casual users tend to go on more rides during typical working hours.
+
+  4. `Members` went on slightly more rides than casual users during the times that people usually leave their 9-5.
 
 <br>
 
