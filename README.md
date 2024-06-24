@@ -172,7 +172,7 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
-# Count of Annual Member vs. Casual User Rides (Full Year and Q1-Q4)
+## Count of Annual Member vs. Casual User Rides (Full Year and Q1-Q4)
 
 <br>
 
