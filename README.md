@@ -306,14 +306,23 @@ ORDER BY member_casual, rideable_type;
 
    * In terms of `miles traveled`, both members and casual riders travel about the same distance on an average trip.
 
-
 <br>
 
 <br>
 
 ### Key Takeaways
 
-* Now, let's calculate the `median` data for ride duration: 
+  1. On average, casual rides on `classic` bikes were roughly `twice` as long as member rides.
+
+  2. On electric bikes, ride duration was about the same for both member categories.
+
+  3. Both members and casual users traveled about the same average distance on a single trip. 
+
+  4. There were `significant` outliers with regards to docked bikes, which would have to be investigated further with the Cyclistic team before arriving at any conclusions. 
+
+<br>
+
+* The next step is to calculate the `median` data for ride duration: 
   
 <br>
 
