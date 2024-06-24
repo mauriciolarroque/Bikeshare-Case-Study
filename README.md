@@ -247,12 +247,11 @@ FROM ride_counts;
 
 <br>
 
-
    1. In total, `members` go on more rides than casual users.
       
    2. `Casual` rides increase sharply during spring and summer.
 
-   3. Member rides also increase towards the summer months, but `not` as dramatically as casual rides. 
+   3. Member rides make up a greater proportion of all total rides during the `winter` and fall months. 
    
 <br>
 
