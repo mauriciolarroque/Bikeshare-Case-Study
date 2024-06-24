@@ -168,7 +168,7 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
   <br>
   
-  * So, to kick things off, let's see `how many rides` are attributed to annual members vs. casual riders.
+  * So, to kick things off, we're going to see `how many rides` are attributed to annual members vs. casual riders.
 
     * We'll also be taking the percentages of each category of user – as well as dividing the data by quarterly results – to get a more complete picture of what's going on:
 
@@ -237,7 +237,13 @@ FROM ride_counts;
   
 * There is also a noticeable spike in `casual` user rides during the spring and `summer` months.
 
-  * Although the number of member rides also increases – and the number of member rides indeed remains greater than casual rides throughout each quarter – this difference is notably less pronounced. Likewise, the percentages show that the gap between member and casual usage significantly narrows during Q2 and Q3. 
+  * Although the number of member rides also increases – and the number of member rides indeed remains greater than casual rides throughout each quarter – this difference is notably less pronounced. Likewise, the percentages show that the gap between member and casual usage significantly narrows during Q2 and Q3.
+
+### Key Takeaways
+
+   1. `Members` go on more rides than casual users.
+      
+   2. `Casual` rides increase sharply during spring and summer.
 
     * This suggests that `seasonality` plays a key role in the difference between casual rider and member behavior; members make up the bulk of winter/fall bike rides, while casual users become much more active during tourist season.
    
