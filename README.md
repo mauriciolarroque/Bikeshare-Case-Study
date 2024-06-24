@@ -444,7 +444,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-### Our results show us a few interesting insights:
+<br>
 
 <br>
 
@@ -456,10 +456,6 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-<br>
-
-
-<br>
 
  * When adjusted for `Q1` ([Q1 data here](Q1-01.md)), Sunday was the most popular ride day for `casual` users, but Saturday was surprisingly outperformed by Tuesday and Wednesday.
 
@@ -475,6 +471,18 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
+### Key Takeaways 
+
+  1. **Saturday** was most popular with `casual` users.
+
+  2. **Thursday** was most popular with `members`.
+
+  3. `Casual` users were more likely to ride on the weekend, while weekdays were most popular with members.
+
+  4. Both member and casual weekend rides increased from Q2 to Q3.
+
+<br>
+
 To dive deeper into these trends, we can use the query below to figure out which `hours of the day` are most popular to start rides: 
 
 <br>
@@ -483,7 +491,7 @@ To dive deeper into these trends, we can use the query below to figure out which
 
 <!--  * Overall, we can deduce from this data that `weekends` were most popular with casual riders (particularly during the spring and summer months) while weekdays were the most popular ride days for members. -->
 
-## How Many Rides per Member Category Occur at Different Times of Day
+## How Many Rides per Member Category Occur at Different Times of the Day?
 
 <br>
 
