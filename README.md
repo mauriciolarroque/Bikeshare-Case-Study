@@ -438,7 +438,6 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-### However, these results are for the entire year. Let's look at the data by quarterly results: 
 
 <br>
 
