@@ -164,7 +164,11 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
-  * Our original business question was to find out `how member behavior differs from casual rider behavior.` So, to kick things off, let's see `how many rides` are attributed to annual members vs. casual riders.
+  * As a quick refresher, our original business question was to find out `how member behavior differs from casual rider behavior.`
+
+  <br>
+  
+  * So, to kick things off, let's see `how many rides` are attributed to annual members vs. casual riders.
 
     * We'll also be taking the percentages of each category of user – as well as dividing the data by quarterly results – to get a more complete picture of what's going on:
 
