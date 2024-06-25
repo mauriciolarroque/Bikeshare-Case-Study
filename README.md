@@ -302,6 +302,10 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
+<br>
+
+<br>
+
  * On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there was only a slight difference between both groups. 
 
    * In terms of `miles traveled`, both members and casual riders travel about the same distance on an average trip.
@@ -372,6 +376,13 @@ WHERE quartile = 2);
 ```
 
 <br>
+
+<br>
+
+<br>
+
+<br>
+
 
 * During Q2 and Q3 (spring and summer), the `median` ride time for `casual` users was 13 minutes, while it was `8` minutes for Q1 and `10` minutes for Q4.
 
@@ -464,6 +475,11 @@ ORDER BY rc.member_casual, rc.ride_day;
 <br>
 
 <br>
+
+<br>
+
+<br>
+
 
 * While `24.09%` of member rides occur on the weekend (Saturday and Sunday), that figure rises to `36.25%` among casual riders. 
 
@@ -585,6 +601,10 @@ GROUP BY member_casual;
 
 <br>
 
+<br>
+
+<br>
+
 * During morning commute hours (6:00AM to 8:59AM), `7%` of casual users started rides, compared to `14.4%` of members. Members also had a slighty higher percentage of rides from 4:00pm to 5:59PM, which is the end of a typical workday. 
 
   * From 11:00AM to 4:59 PM, `40.3%` of rides started were casual users, while members lagged slightly behind at `35.2%`
@@ -661,6 +681,10 @@ LIMIT 10;
  |Wells St & Concord Ln               | 12171
  |Montrose Harbor                     | 11987
 
+<br>
+
+<br>
+
 
 
 <br>
@@ -677,6 +701,11 @@ LIMIT 10;
   * Now, let's check out results for `members`:
 
 <br>
+
+<br>
+
+<br>
+
 
 | start_station_name                    | number_of_rides |
 |---------------------------------------|-----------------|
