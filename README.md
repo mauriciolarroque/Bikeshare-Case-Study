@@ -199,10 +199,6 @@ SELECT
 FROM ride_counts;
 ```
 
-<br>
-
-<br>
-
 ### Output: 
 
 | count_of_casual_rides_2023 | count_of_member_rides_2023  | percent_casual_rides_2023 | percent_member_rides_2023 |
