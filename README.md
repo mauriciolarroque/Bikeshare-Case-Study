@@ -180,8 +180,6 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
-<br>
-
 ```sql
 WITH ride_counts AS
 (
@@ -231,6 +229,13 @@ FROM ride_counts;
 
 <br>
 
+<br>
+
+<br>
+
+<br>
+
+
 * The first thing that jumps out is the fact that there are more member rides than casual rides.
   
 * There is also a noticeable spike in `casual` user rides during the spring and `summer` months.
@@ -261,8 +266,6 @@ FROM ride_counts;
 
 <br>
 
-<br>
-
 ```sql
 SELECT 
    member_casual,
@@ -280,8 +283,6 @@ FROM
 GROUP BY member_casual, rideable_type
 ORDER BY member_casual, rideable_type;
 ```
-
-<br>
 
 ### Output (Scroll Right): 
 
@@ -410,7 +411,6 @@ Now that we've gotten these insights, it would also be helpful to know which day
 
 <br>
 
-<br>
 
 ```sql
 WITH ride_counts AS (
@@ -444,8 +444,6 @@ JOIN total_rides tr                        -- We'll use a JOIN statement so we c
     ON rc.member_casual = tr.member_casual
 ORDER BY rc.member_casual, rc.ride_day; 
 ```
-
-<br>
 
 ### Output (Full-Year 2023):
 
@@ -518,11 +516,8 @@ To dive deeper into these trends, we can use the query below to figure out which
 
 <br>
 
-<!--  * Overall, we can deduce from this data that `weekends` were most popular with casual riders (particularly during the spring and summer months) while weekdays were the most popular ride days for members. -->
 
 ## How Many Rides per Member Category Occur at Different Times of the Day?
-
-<br>
 
 ```sql
 WITH ride_hour_counts AS (
@@ -623,8 +618,6 @@ GROUP BY member_casual;
 
 <br>
 
-* Overall, we can deduce from this data that `weekends` were most popular with casual riders, weekdays were most popular with member riders, casual riders tend to ride bikes more often outside of working hours, and members are more active than casual riders during the times that people usually `commute` to and from work.
-
 <br>
 
 <br>
@@ -660,8 +653,6 @@ ORDER BY 2 DESC
 LIMIT 10;
 ```
 
-<br>
-
 ### Casual User Output: 
  
  |           start_station_name       | number_of_rides |
@@ -679,29 +670,13 @@ LIMIT 10;
 
 <br>
 
-<br>
-
-
-
-<br>
-
 ### Map View: Streeter Dr. & Grand Ave. 
 
 ![Screenshot 2024-06-20 at 5 15 05 PM 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/d2b2f829-bc5b-4f86-948d-e101b1a56b8c)
 
-
 <br>
 
-* As we can see, the most popular station for casual users (`Streeter Dr. & Grand Ave.`) is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. All of the other start stations are also near the waterfront, near hotels or next to other popular tourist attractions throughout the city.
-
-  * Now, let's check out results for `members`:
-
-<br>
-
-<br>
-
-<br>
-
+### Member User Output: 
 
 | start_station_name                    | number_of_rides |
 |---------------------------------------|-----------------|
@@ -724,6 +699,14 @@ LIMIT 10;
 
 
 <br>
+
+<br>
+
+<br>
+
+<br>
+
+* As we can see, the most popular station for casual users (`Streeter Dr. & Grand Ave.`) is a short bike ride away from `tourist` attractions such as the Navy Pier, the Chicago River, city parks and several local eateries. All of the other start stations are also near the waterfront, near hotels or next to other popular tourist attractions throughout the city.
 
 * The top start station for members (`Clinton St. & Washington Blvd`) is located near the freeway and several commercial buildings. Unlike casual users, rides that are attributed to members don't have the same tendency to circulate around tourist areas. It seems as if their rides are for more routine purposes, such as running errands, getting home, and going to work.
 
