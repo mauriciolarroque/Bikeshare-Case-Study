@@ -176,6 +176,10 @@ To make sure that all changes were saved, I converted the CSVs into **Excel Work
 
 <br>
 
+<br>
+
+<br>
+
 ## Count of Annual Member vs. Casual User Rides (Full Year and Q1-Q4)
 
 <br>
@@ -262,6 +266,10 @@ FROM ride_counts;
 
 <br>
 
+<br>
+
+<br>
+
 ## Max, Min, and Mean Values for Members vs. Casual Riders
 
 <br>
@@ -325,6 +333,12 @@ ORDER BY member_casual, rideable_type;
 
 * The next step is to calculate the `median` data for ride duration: 
   
+<br>
+
+<br>
+
+<br>
+
 <br>
 
 ## Median for Ride Duration
@@ -406,6 +420,13 @@ Now that we've gotten these insights, it would also be helpful to know which day
 * This will give us a better sense of when they choose to go on rides and whether they use them for work or for recreational purposes: 
 
 <br> 
+
+<br>
+
+<br>
+
+<br>
+
 
 ## Count of Member vs. Casual Rides Per Weekday
 
@@ -516,6 +537,9 @@ To dive deeper into these trends, we can use the query below to figure out which
 
 <br>
 
+<br>
+
+<br>
 
 ## How Many Rides per Member Category Occur at Different Times of the Day?
 
@@ -627,6 +651,10 @@ GROUP BY member_casual;
 <br>
 
 <br> 
+
+<br>
+
+<br>
 
 ## Top 10 Start Stations for Each User Category
 
