@@ -59,7 +59,7 @@ For this project, I decided to analyze a full year of ridesharing data. After ta
 
 After the ZIPs were downloaded, I created two separate folders. One would contain the original files for future reference, while the other contained the CSVs that I would directly edit. 
 > [!NOTE]
-> The data did **not** include information about individual users. Each row simply represented a bike ride that had taken place. Thus, some important limitations of this data are that we cannot analyze individual user habits or count the number of members compared to casual riders. 
+> The data did **not** include information about individual users. Each row simply represented a bike ride that had taken place. Thus, some important limitations of this data to consider are that we cannot analyze individual user habits or count the number of members compared to casual riders. 
 
 <br>
 
