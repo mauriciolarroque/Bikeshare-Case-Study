@@ -387,7 +387,7 @@ WHERE quartile = 2);
 
   1. The median ride times for member and casual users revealed `longer` ride times for casual users than members.
 
-  2. This corroborates the data taken from the summary statistics that we previously analyzed.
+  2. The medians of `both` member and casual rides `increase` during the spring and summer months. 
 
 <br>
 
@@ -706,6 +706,12 @@ LIMIT 10;
 
 <br>
   
+### Key Takeaways 
+  1. Member rides are more active around `commercial areas`, which suggests that they may be for `commuting` purposes.
+
+  2. Casual rides tend to start around some of the city's popular tourist centers, which suggests that these rides are primarily `recreational.`
+
+
 
 
 
