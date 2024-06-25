@@ -698,7 +698,7 @@ LIMIT 10;
 
 <br>
 
-### Map View: Streeter Dr. & Grand Ave. 
+### Top Casual Start Station: Streeter Dr. & Grand Ave. 
 
 ![Screenshot 2024-06-20 at 5 15 05 PM 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/d2b2f829-bc5b-4f86-948d-e101b1a56b8c)
 
@@ -721,7 +721,7 @@ LIMIT 10;
 
 <br>
 
-### Map View: Clinton St & Washington Blvd 
+### Top Member Start Station: Clinton St & Washington Blvd 
 
 ![Screenshot 2024-06-20 at 5 11 11 PM 2](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/79913b65-d07c-49e7-8691-1b33ecd165d7)
 
