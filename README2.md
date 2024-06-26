@@ -602,7 +602,7 @@ ORDER BY member_casual, rideable_type;
     
        * The problem occurred because the end station coordinates of the affected rows were 0, 0.
        
-       * Earlier on, I had used the `Haversine formula` to create the `ride_miles` column by measuring the distance between the start and end station coordinates for each row. During this process, SQL entered the distance between the start station coordinates and `0°N, 0°E`, which is a random geographic point in the middle of the ocean, off the coast of South America. 
+       * Earlier on, I had used the `Haversine formula` to create the `ride_miles` column by measuring the distance between the start and end station coordinates for each row. During this process, SQL entered the distance between the start station coordinates and `0°N, 0°E`, which is a random geographic point off the coast of South America. This explains why the rides were thousands of miles long. 
 
     * Because of this, I just changed the affected `ride_miles` columns to `NULL` values. 
          
@@ -614,9 +614,9 @@ ORDER BY member_casual, rideable_type;
 
   * Given that the average ride time on a docked bike was `182.8` minutes – while the longest ride distance on a docked bike was only about 19 miles – the data points were not adding up.
     
-    * After querying the ride times in SQL, I found that well over 4000 docked bike rides were greater than the average, and one ride had even lasted a whopping `68` days!
+    * After querying the ride times in SQL, I found that well over `4000` rides on docked bikes were much longer than the average of 2 hours. One ride even lasted a jaw-dropping `68` days.
 
-    * The most rational explanation for this is that the bike rides were never officially "ended" after having been initiated. This could be because the bikes were lost, the customer forgot to end the bike ride (or they were under the impression that the bike ride would end automatically), or perhaps because of a technical error on Cyclistic's end.
+    * These events could have transpired for a lot of reasons. Maybe the bikes were lost, the customer forgot to end the bike ride, the customer mistakenly thought that they had ended the bike ride, or maybe there was some kind of technical issue on the bikesharing app or on the bike's geo-tracking hardware.
 
          * In any case, without further background information regarding these issues, we cannot arrive at any definite conclusions as to what caused these rides to last so long.
            
@@ -658,7 +658,7 @@ WHERE ride_month IN ("04", "05", "06");
 
 <br>
 
-With these temporary tables created, everything was ready to start querying the data: 
+With these temporary tables created, everything was ready to start `analyzing` the data: 
 
 <br>
 
