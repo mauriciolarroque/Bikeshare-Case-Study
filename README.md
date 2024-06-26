@@ -40,7 +40,7 @@ However, the marketing team is asking us for more information on current users s
 
 <br>
 
-The CMO would like us to answer ****three main questions**** to guide the upcoming marketing program:
+The CMO has ****three main questions**** she wants us to answer:
 
 <br>
 
@@ -57,17 +57,17 @@ The CMO would like us to answer ****three main questions**** to guide the upcomi
 
 <br>
 
-For this project, I decided to analyze a full year of ridesharing data. After taking a look at the ZIP files, I located the data for 2023 and downloaded it: 
+To get started, I downloaded all the datasets for Cyclistic's `2023` data:
 
 ![Group 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/1c2e4a28-1100-4fc0-80bc-13fd9aa52173)
 
-After the ZIPs were downloaded, I created two separate folders. One would contain the original files for future reference, while the other contained the CSVs that I would directly edit. 
+After the ZIPs were downloaded, I made two separate folders. One had the original files for future reference, while the other had the CSVs I would be editing. 
 > [!NOTE]
-> The data did **not** include information about individual users. Each row simply represented a bike ride that had taken place. Thus, some important limitations of this data to consider are that we cannot analyze individual user habits or count the number of members compared to casual riders. 
+> The data did **not** include information about individual users. Each row just represented a bike ride that had taken place, and a column called `member_casual` indicated whether the person who went on that ride was a member or a casual user. Thus, I was unable to analyze individual user habits or count the number of members compared to casual riders, which introduced some limitation to the analysis. 
 
 <br>
 
-Each one of the 12 datasets (one for each month) contained **13 columns**, which we'll break down below: 
+Each one of the 12 datasets (one for each month) had the exact same **13 columns**. Here's a full breakdown of them:  
 
 <br>
 
@@ -108,9 +108,9 @@ Each one of the 12 datasets (one for each month) contained **13 columns**, which
 
 <br>
 
-The first phase of this project was to clean up all the datasets. As a starting point, Excel was the ideal option to carry out the initial cleaning tasks. 
+The first part of this project was to clean up all the datasets. As a starting point, Excel was the most practical option to do the initial data cleaning. 
 
-To make sure that all changes were saved, I converted the CSVs into **Excel Workbooks** and went through the following steps in each spreadsheet: 
+After converting the CSVs into **Excel Workbooks**, I went through the following steps in each spreadsheet: 
 
 ### Link Here: [Data Cleaning Excel Full Steps](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/Data-Cleaning.md)
 
