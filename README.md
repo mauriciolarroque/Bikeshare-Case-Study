@@ -22,7 +22,7 @@ For this project, we'll be using **Microsoft Excel, MySQL** and **Tableau**  to 
 
 Our fictional company, **Cyclistic**, is a Chicago-based bikesharing service that currently owns and operates a fleet of over **15,000** bicycles, which are linked to roughly **800** bike stations. 
 
-Cyclistic users are grouped into two categories: annual members and casual riders. 
+Cyclistic users are grouped into two categories: `annual members and casual riders`. 
 
 Members pay a yearly subscription in exchange for substantial ride discounts, while casual riders are those who either purchase a day pass, or pay per minute as they ride. 
 
