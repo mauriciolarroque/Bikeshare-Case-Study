@@ -614,7 +614,7 @@ As a quick reminder, all of the insights I listed above are `fully summarized` o
 
 <br>
 
-Also, if you're anything like me, and you'd much rather look at a set of charts than read through a massive stack of data analysis documentation, you might like to check out the `data visualization` section I created using `Tableau`. It'll be at the `bottom` of the main page, which you can quickly go back to using the link `below`: 
+Also, if you're anything like me, and you'd much rather look at a set of charts than read through a massive stack of data analysis documentation, you might like to check out the data visualization section I created using `Tableau`. It'll be at the `bottom` of the main page, which you can quickly go back to using the link `below`: 
 
 <br>
 
