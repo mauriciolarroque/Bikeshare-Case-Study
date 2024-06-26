@@ -133,7 +133,7 @@ DESCRIBE january_2023; -- And february_2023, march_2023, etc.
 
 <br> 
 
-• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format. This would make it possible to run DATE functions and get vital insights:
+• The datasets looked mostly good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format. This would make it possible to run DATE functions and get vital insights:
 
 ```sql
 ALTER TABLE february_2023
@@ -237,7 +237,7 @@ These new columns would be especially useful after all the data was merged into 
 
   * Since I had previously defined ride_id as the primary key individually in all 12 tables, this might cause complications during the merging process.
 
-    * Just to be safe, I decided to temporarily `drop the primary keys` in each table:
+    * To avoid any issues, I `dropped the primary keys` in each table. After the full-year table was made, I would reinstate `ride_id` as the primary key. 
 
 <br>
 
@@ -261,11 +261,9 @@ ALTER TABLE december_2023 DROP PRIMARY KEY;
 <br>
 
 
-* With each primary key dropped, it was now totally safe to merge the tables.
+* Now, it was time to go through the process of combining all 12 tables into a single table for the `full year of 2023`:
 
-  * Although we could technically work with all 12 tables at the same time, this would lead to a lot of complicated JOIN statements down the line, which would reduce overall efficiency. 
-
-     * Therefore, to simplify the data analysis process, it was a more optimal solution to combine all 12 months of data into a single source.
+<br>
 
 #### To do this, I created a new table - which we’ll call `cyclistic_2023` - into which I could transfer all the data:
 
@@ -299,7 +297,7 @@ CREATE TABLE cyclistic_2023 (
 
 <br>
 
-* Once the table was created, I executed these statements in MySQL to `transfer` all the data into the new table:
+* With the table structure created, these statements in MySQL would `transfer` all the data from the existing tables into the new empty table:
 
 <br>
 
@@ -337,7 +335,7 @@ FROM february_2023;
 
 <br>
 
-* Now that all the data was stored in a single source, I ran a few tests to ensure `data integrity`. This query checked for `duplicate` values in the ride_id column by comparing the unique ride_id values with the total number of ride_ids:
+* Now that all the data was stored in a single source, I wanted to check that none of the `ride_ids` were duplicate. Since I had previously changed the `ride_ids` individually in all 12 tables, this could be a concern:
 
 <br>
 
@@ -355,9 +353,11 @@ cyclistic_2023
 
 <br>
 
-* Since the total number of ride_ids (`5719877`) was `equal` to the number of unique ride_ids, I was able to confirm that all duplicates had been eliminated. 
+* Luckily, the total number of ride_ids in the new table (`5719877`) was `equal` to the number of `unique` ride_ids.
 
-<br>
+* Now that all `5.7 million` bike-ride had their own unique identifiers, the table was complete.
+
+* However, little did I k no
 
 <br>
 
@@ -386,9 +386,9 @@ WHERE ride_month = "01" AND member_casual = "member"
 
 <br>
 
-* After running the above query, several ride times showed up as `negative` amounts of time.
-
-  * This was obviously an impossibility, so I executed a couple of queries to find out more details about the affected rows and count exactly how many rows had faulty ride times:
+* After running the above query, several ride times showed up as `negative` amounts of time, which was obviously impossible (unless the bike riders had somehow invented time travel). 
+  
+  * Therefore, I wrote up a few queries to find out more details about the affected rows and count exactly how many rows had ride times `less than zero`:
 
 <br>
 
@@ -411,7 +411,11 @@ WHERE started_at > ended_at
 
 <br>
 
-After checking the timestamps, I discovered that `134 rows` had negative ride times. To solve this, I deleted the rows using this statement:
+As it turns out, some of the `end times` were actually earlier than the start times. A COUNT function showed that `134 rows` were affected by this bad data. 
+
+* After looking at the timestamps, it seemed to have been a case of the system mixing up the start times with the end times. However, with no one to consult about the data source or what might have gone wrong, there was no way to know for sure.
+
+* Since there were only `134` affected rides (which is a negligible amount considering that there are almost `6 million rows` in the database) I decided to `delete` the rows using this statement:
 
 <br>
 
@@ -426,7 +430,7 @@ WHERE ride_duration < 0;
 
 <br>
 
-* Because this was such a significant error, I decided to recheck every column in the new table:
+* Then, I rechecked every column in the new table:
 
 <br>
 
