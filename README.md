@@ -285,7 +285,8 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
-![Total Members vs  Casual](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/b9afc48f-e62e-4d17-8286-75f39a16ae6e)
+![Total Members vs  Casual 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/b963fd52-6dd2-49a6-9e71-492bff254477)
+
 
 <br>
 
