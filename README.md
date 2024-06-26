@@ -275,6 +275,9 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
 <br>
 
+![Frame 7 (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/0ff35948-935e-4b09-8458-8f9e272c13cc)
+
+
 
 
 
