@@ -13,7 +13,7 @@
 
 <br>
 
-  * Before proceeding further, I double-checked for duplicates by comparing how many ride_ids were unique vs. the total number of `ride_ids` in each table:
+  * Although the initial data cleaning showed that all `ride_id`s were unique values, I ran another check for duplicates in `MySQL`: 
 
 <br>
 
@@ -26,9 +26,10 @@ FROM february_2023                                -- We'll use the February data
 
 <br>
 
-   * Although every `ride_id` showed up as unique in Excel, some of the ids were duplicated after converting the Excel workbooks into CSVs.
+   * Unfortunately, some of the ids in the original datasets `were duplicated` after I converted the Excel files back into CSVs to load them into the database.
      
-     * To find out more about them, I ran this query to show every ride_id in each table that was present more than once in the ride_id column.
+     * To find out more about how this happened, I ran this query to show every ride_id in each table which was present more than once in the ride_id column.
+       
 <br>
 
 ```mysql
@@ -47,9 +48,9 @@ HAVING COUNT(*) > 1; -- This gives us all the ride_ids in the table that appear 
 
 * This showed that every duplicate had the exact same format; they were all numbers in scientific notation (ie. `3.21E+15`, `4.56E+15`, etc.).
 
-  • Since all others `ride_ids` were 16-digit combinations of 8 letters and 8 numbers, I decided to make every `ride_id` match this format.
+  • Since all others `ride_ids` were 16-digit combinations of 8 letters and 8 numbers, it was best to make every `ride_id` match this format.
    
-    * However, I first ran the code **below** to check if there were any other ids with these odd characters:
+    * However, I first ran the query **below** to check if there were any other ids with these odd characters:
   
 <br>
 
@@ -66,7 +67,9 @@ GROUP BY ride_id
 
 <br>
 
-• As it turns out, there were, in fact, other non-duplicate `ride_id` values with this format. Which gave me the opportunity to change all the affected ride_ids at once: 
+• As it turns out, there were, in fact, other non-duplicate `ride_id` values with this format. 
+
+* This gave me the opportunity to solve both problems at once; using the query below, I could convert all the `ride_id`s into the same format while also (most likely) getting rid of any duplicate values:
 
 ```sql
 UPDATE january_2023
@@ -90,7 +93,7 @@ WHERE ride_id REGEXP 'E+'
 
 <br>
 
-Finally, I ran this query to check that all `ride_ids` were unique: 
+All of the ids were now in the same format, so all I had to do was check again to see that `none` of them were `duplicate`:
 
 ```sql
 SELECT
@@ -109,7 +112,9 @@ AND LENGTH(ride_id) = 16
 
 <br>
 
-After confirming that all the `ride_ids` were unique, I moved on to processing the data into an easy-to-use format: 
+Fortunately, all the duplicates were sucessfully removed. A huge problem had been identified and quickly solved. 
+
+The next step was to process the data through various tasks that would make it much easier to run queries and get all the data I needed in the `same place`:
 
 <br>
 
@@ -128,7 +133,7 @@ DESCRIBE january_2023; -- And february_2023, march_2023, etc.
 
 <br> 
 
-• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format: 
+• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format. This would make it possible to run DATE functions and get vital insights on the data:
 
 ```sql
 ALTER TABLE february_2023
