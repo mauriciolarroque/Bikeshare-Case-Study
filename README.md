@@ -20,15 +20,19 @@ For this project, we'll be using **Microsoft Excel, MySQL** and **Tableau**  to 
 ## Background 
 <br>
 
-Our fictional company, **Cyclistic**, is a Chicago-based bikesharing service that currently owns and operates a fleet of over **15,000** bicycles, which are linked to roughly **800** bike stations. Cyclistic users are grouped into two categories: annual members and casual riders. Members pay a yearly subscription in exchange for substantial ride discounts, while casual riders are those who either purchase a day pass, or pay per minute as they ride. 
+Our fictional company, **Cyclistic**, is a Chicago-based bikesharing service that currently owns and operates a fleet of over **15,000** bicycles, which are linked to roughly **800** bike stations. 
 
-Since 2016, the company's marketing strategy has been to leverage the company's flexible pricing plans to appeal to as many users as possible, with the goal of maximizing revenue. However, a new report from the finance department shows that annual members are by far the most profitable customer segment. 
+Cyclistic users are grouped into two categories: annual members and casual riders. 
+
+Members pay a yearly subscription in exchange for substantial ride discounts, while casual riders are those who either purchase a day pass, or pay per minute as they ride. 
+
+Since 2016, the company's marketing strategy has been to offer flexible pricing plans to appeal to as many users as possible. However, a new report from the finance department shows that annual members are by far the most profitable customer segment. 
 
 <br>
 
-Cyclistic's **Chief Marketing Officer** - Lucy Moreno - has thus decided that it would be most advantageous to **convert existing casual users** into annual members, rather than launch a marketing campaign to acquire brand-new users.
+Thus, Cyclistic's **Chief Marketing Officer** - Lucy Moreno - wants us to `convert existing casual users` into annual members, rather than acquiring brand-new users with a big marketing campaign.
 
-However, the marketing team has asked for a little more info on current users to inform their efforts. 
+However, the marketing team is asking us for more information on current users so they can come up with a good strategy. 
 
 <br>
 
