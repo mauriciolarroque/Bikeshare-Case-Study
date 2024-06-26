@@ -272,7 +272,7 @@ FROM ride_counts;
    
 <br>
 
-The next step is to pull up `summary statistics` for the full year of data:
+#### Now that we have more context about the data, the next step is to pull up `summary statistics` for the full year of data:
 
 <br>
 
