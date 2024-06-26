@@ -133,7 +133,7 @@ DESCRIBE january_2023; -- And february_2023, march_2023, etc.
 
 <br> 
 
-• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format. This would make it possible to run DATE functions and get vital insights on the data:
+• Most of the content in the datasets looked good, but the `started_at` and `ended_at` columns needed to be changed to `DATETIME` format. This would make it possible to run DATE functions and get vital insights:
 
 ```sql
 ALTER TABLE february_2023
