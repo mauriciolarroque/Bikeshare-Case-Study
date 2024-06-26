@@ -625,7 +625,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-### Now that all the data cleaning was done, it was time to create some temporary tables for each quarter and then move on to the data analysis phase 🙌:
+ Now that all the data cleaning was done, I created some temporary tables for each quarter so I could quickly pull up data without overloading the database:
 
 <br>
 
