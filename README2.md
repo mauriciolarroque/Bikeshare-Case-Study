@@ -355,9 +355,9 @@ cyclistic_2023
 
 * Luckily, the total number of ride_ids in the new table (`5719877`) was `equal` to the number of `unique` ride_ids.
 
-* Now that all `5.7 million` bike-ride had their own unique identifiers, the table was complete.
+* Now that all `5.7 million` bike-ride had their own unique identifiers, it looked like the full-year table was complete.
 
-* However, little did I k no
+* However, little did I know that there would be a few more bumps in the road before getting the data fully ready for the data analysis process: 
 
 <br>
 
