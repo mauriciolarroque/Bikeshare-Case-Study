@@ -30,9 +30,17 @@ Since 2016, the company's marketing strategy has been to offer flexible pricing 
 
 <br>
 
-Thus, Cyclistic's **Chief Marketing Officer** - Lucy Moreno - wants us to `convert existing casual users` into annual members, which she believes is much easier than acquiring brand-new users with a big marketing campaign.
+Thus, Cyclistic's **Chief Marketing Officer** - Lucy Moreno - wants to `convert existing casual users` into annual members, which she believes is much easier than acquiring brand-new users with a big marketing campaign.
 
-However, the marketing team is asking us for more information on current users so they can come up with a good strategy. 
+However, the marketing team wants to know more about `how` casual users behave compared to members, which might hold the key to convert them into annual members. 
+
+<br>
+
+That's where we come in. 
+
+<br>
+
+Our job is to look through the data and see if we can find any insights that will help turn more casual riders into paying annual members. 
 
 <br>
 
