@@ -180,7 +180,7 @@ After converting the CSVs into **Excel Workbooks**, I went through the following
 
 <br>
 
-### [Link Here] to MySQL Data Analysis:](MySQL.md)
+### [Link Here](MySQL.md) to MySQL Data Analysis:
 
 <br>
 
