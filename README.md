@@ -302,6 +302,11 @@ To start off, we can see here that there are substantially more members than the
 
 <br>
 
+In terms of which types of bikes were used, there `doesn't` seem to be much variance at all between members and casual users. The only notable difference here is that only casual users are using `docked bikes.` Overall, there isn't much difference in this category of user behavior. 
+
+<br>
+
+
 
 
 
