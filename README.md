@@ -343,7 +343,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-* Now, we're going to calculate the `median` data for ride duration: 
+* To see if we can corroborate these insights on ride times, we're going to calculate the `median` data for ride duration: 
   
 <br>
 
