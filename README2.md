@@ -600,7 +600,9 @@ ORDER BY member_casual, rideable_type;
     
     *  Fortunately, there were only `three` entries greater than 100 miles; all of which were roughly 6000 miles in length. The rest of the `ride_miles` columns were under 30 miles.
     
-       * The problem occurred because the end station coordinates of the affected rows were 0, 0. After I applied the `Haversine formula` to measure the distance between the start and end station coordinates, SQL entered the distance between the start station coordinates and `0°N, 0°E`, which is a random geographic point in the middle of the ocean, off the coast of South America. 
+       * The problem occurred because the end station coordinates of the affected rows were 0, 0.
+       
+       * Earlier on, I had used the `Haversine formula` to create the `ride_miles` column by measuring the distance between the start and end station coordinates for each row. During this process, SQL entered the distance between the start station coordinates and `0°N, 0°E`, which is a random geographic point in the middle of the ocean, off the coast of South America. 
 
     * Because of this, I just changed the affected `ride_miles` columns to `NULL` values. 
          
