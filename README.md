@@ -24,7 +24,7 @@ Our fictional company, `Cyclistic`, is a Chicago-based bikesharing service that 
 
 Cyclistic users are grouped into two categories: `annual members and casual riders`. 
 
-`Members` pay a yearly subscription in exchange for substantial ride discounts, while `casual` riders are those who either purchase a day pass, or pay per minute for a bike ride. 
+`Members` pay a yearly subscription in exchange for substantial ride discounts, while `casual` riders are those who either purchase a day pass, or pay per minute as they ride. 
 
 Since 2016, the company's marketing strategy has been to offer flexible pricing plans to appeal to as many users as possible. However, a new report from the finance department shows that annual members are by far the most profitable customer segment. 
 
