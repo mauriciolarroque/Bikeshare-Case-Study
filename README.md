@@ -20,7 +20,7 @@ For this project, we'll be using **Microsoft Excel, MySQL** and **Tableau**  to 
 ## Background 
 <br>
 
-Our fictional company, **Cyclistic**, is a Chicago-based bikesharing service that currently owns and operates a fleet of over **15,000** bicycles, which are linked to roughly **800** bike stations. 
+Our fictional company, `Cyclistic`, is a Chicago-based bikesharing service that currently owns and operates a fleet of over **15,000** bicycles, which are linked to roughly **800** bike stations. 
 
 Cyclistic users are grouped into two categories: `annual members and casual riders`. 
 
