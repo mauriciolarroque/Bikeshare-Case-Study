@@ -236,7 +236,6 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
   4. Both member and casual weekend rides increased from Q2 to Q3.
 
-  5. <br>
 
   <br>
 
