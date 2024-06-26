@@ -658,6 +658,10 @@ WHERE ride_month IN ("04", "05", "06");
 
 <br>
 
+With these temporary tables created, everything was ready to start querying the data: 
+
+<br>
+
 ### Link: [Back to Main Page](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/README.md#part-iv-mysql-data-analysis)
 
 <br>
