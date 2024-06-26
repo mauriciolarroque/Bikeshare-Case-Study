@@ -220,7 +220,7 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
   1. The median ride times for member and casual users revealed `longer` ride times for casual users than members.
 
-  2. The medians of `both` member and casual rides `increased` during the spring and summer months.
+  2. The medians of `both` member and casual ride times `increased` during the spring and summer months.
 
 <br>
 
