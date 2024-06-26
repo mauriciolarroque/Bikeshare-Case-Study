@@ -259,5 +259,22 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
   2. `Casual `rides tended to start around some of the city's popular tourist centers, which suggests that these rides are primarily `recreational.`
 
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+# Part V: Data Visualization with Tableau
+
+<br>
+
+
 
 
