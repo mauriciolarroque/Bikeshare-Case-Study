@@ -92,7 +92,7 @@ FROM ride_counts;
 
 <br>
 
-### Key Takeaways
+### Key Takeaways 💡
 
 <br>
 
@@ -163,7 +163,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-### Key Takeaways
+### Key Takeaways 💡
 
   1. On average, casual rides on `classic` bikes were roughly `twice` as long as member rides.
 
@@ -249,7 +249,7 @@ WHERE quartile = 2);
 
 <br>
 
-### Key Takeaways
+### Key Takeaways 💡
 
   1. The median ride times for member and casual users revealed `longer` ride times for casual users than members.
 
@@ -363,7 +363,7 @@ ORDER BY rc.member_casual, rc.ride_day;
 
 <br>
 
-### Key Takeaways 
+### Key Takeaways 💡
 
   1. **Saturday** was most popular with `casual` users.
 
@@ -474,7 +474,7 @@ GROUP BY member_casual;
 
 <br>
 
-### Key Takeaways 
+### Key Takeaways 💡
 
   1. `Casual` riders tend to favor `late night` rides more than members.
 
@@ -586,7 +586,7 @@ LIMIT 10;
 
 <br>
   
-### Key Takeaways 
+### Key Takeaways 💡
 
   1. Member rides are more active around `commercial areas`, which suggests that they may be for `commuting` purposes.
 
