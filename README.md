@@ -71,7 +71,7 @@ To get started, I downloaded all of the datasets for Cyclistic's `2023` data:
 
 After the ZIPs were downloaded, I made two separate folders. One had the original files for future reference, while the other had the CSVs I would be editing and cleaning. 
 > [!NOTE]
-> The data did **not** include information about individual users. Each row just represented a bike ride that had taken place, and a column called `member_casual` indicated whether the person who went on that ride was a member or a casual user. Thus, I was unable to analyze individual user habits or count the number of members compared to casual riders, which introduced some limitation to the analysis. 
+> The data did **not** include information about individual users. Each row just represented a bike ride that had taken place, and a column called `member_casual` indicated whether the person who went on that ride was a member or a casual user. Thus, I was unable to analyze individual user habits or count the number of members compared to casual riders, which introduced some inherent limitations to the analysis. 
 
 <br>
 
