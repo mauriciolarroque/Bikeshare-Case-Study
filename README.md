@@ -239,7 +239,7 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
   <br>
 
-### Key Insights V: Which Hours of the Day Were Most Popular
+## Key Insights V: Which Hours of the Day Were Most Popular
 
   1. `Casual` riders went on more `late night` rides (10PM-3AM) more than members.
 
@@ -253,7 +253,7 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
 <br>
 
-### Key Insights VI: Most Popular Start Stations 
+## Key Insights VI: Most Popular Start Stations 
 
   1. `Member` rides were more active around `commercial areas`, which supports the previous insight that they may have been primarily for routine commuting. 
 
