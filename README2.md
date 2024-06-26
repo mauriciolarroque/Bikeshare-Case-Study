@@ -592,17 +592,17 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-* From these results, several red flags popped up. There were a lot of problematic data points that needed to be addressed before moving forward.
+* From these results, several red flags popped up. 
   
-  * The maximum values were surprising, to say the least. Two of our entries here are greater than `6000` miles!
+  * The maximum values were surprising, to say the least. According to the data, the longest distance covered on a bike trip was well over `6000 miles`. 
 
-    * Since 6000 miles seems excessive (given that this is more than half the length of North America), I decided to investigate these cases.
+    * Given that this was more than half the length of the United States, I decided to investigate these cases by running a query to see how many ride distances were `greater than` 100 miles.
     
-    *  Fortunately, there were only `three` of these erroneous values. The problem occurred because the end station coordinates for these entries was `0°N, 0°E`.
+    *  Fortunately, there were only `three` entries greater than 100 miles; all of which were roughly 6000 miles in length. The rest of the `ride_miles` columns were under 30 miles.
     
-    *  This caused the `Haversine formula` we used earlier to measure the distance between the start station coordinates and the coordinates for a random geographic point off the coast of South America.
+       * The problem occurred because the end station coordinates of the affected rows were 0, 0. After I applied the `Haversine formula` to measure the distance between the start and end station coordinates, SQL entered the distance between the start station coordinates and `0°N, 0°E`, which is a random geographic point in the middle of the ocean, off the coast of South America. 
 
-       * Because this was unquestionably a dataset error (unless users ended their bike trip in the middle of the ocean), I updated these three `ride_miles` entries to **NULL** values.
+    * Because of this, I just changed the affected `ride_miles` columns to `NULL` values. 
          
 <br>
 
