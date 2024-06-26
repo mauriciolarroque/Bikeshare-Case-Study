@@ -281,20 +281,27 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
 <br>
 
-Using `Tableau`, I converted the insights listed above into simple visualizations that make it easy to grasp the differences between how members and casual users behave: 
+Using `Tableau`, I converted the insights listed above into simple visualizations that make it easy to grasp the differences between how members and casual users behave
 
 <br>
 
-To start off, we can see here that there are substantially more members than there are casual users. For this reason, a lot of the subsequent analysis will focus more on the `differences` between the `percentage` of rides for each user category, rather than the raw numbers:  
+<br>
 
 <br>
 
 ![Total Members vs  Casual 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/b963fd52-6dd2-49a6-9e71-492bff254477)
 
+<br>
+
+To start off, we can see here that there are substantially more members than there are casual users. For this reason, a lot of the subsequent analysis will focus more on the `differences` between the `percentage` of rides for each user category, rather than the raw numbers:  
+
 
 <br>
 
 ![Rideable Type (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/e1b2d271-b8ff-434a-8d1d-de6f2d39a6ef)
+
+<br>
+
 
 
 
