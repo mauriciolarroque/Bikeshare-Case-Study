@@ -275,8 +275,7 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
 <br>
 
-![Tableau_Logo](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/d89db62d-0b9f-4f89-8286-0b3ea6c6f40d)
-![Tableau_Logo](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/d89db62d-0b9f-4f89-8286-0b3ea6c6f40d)
+
 
 
 
