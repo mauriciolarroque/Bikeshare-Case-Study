@@ -587,7 +587,29 @@ LIMIT 10;
 <br>
   
 ### Key Takeaways 
+
   1. Member rides are more active around `commercial areas`, which suggests that they may be for `commuting` purposes.
 
   2. Casual rides tend to start around some of the city's popular tourist centers, which suggests that these rides are primarily `recreational.`
 
+<br>
+
+<br>
+
+Okay, that was `a lot` of information. 
+
+<br>
+
+If you've read this far, I'd like to take this moment to thank you personally. I sincerely appreciate all the time and effort you've taken to check out my work.
+
+<br>
+
+Now, to check out all the `data visualizations` I created in `Tableau`, here's a link back to the main page: 
+
+<br>
+
+### Link: [Back to Main Page](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/README.md#part-iv-mysql-data-analysis)
+
+<br>
+
+<br>
