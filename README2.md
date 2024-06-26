@@ -596,7 +596,7 @@ ORDER BY member_casual, rideable_type;
   
   * The maximum values were surprising, to say the least. According to the data, the longest distance covered on a bike trip was well over `6000 miles`. 
 
-    * Given that this was more than half the length of the United States, I decided to investigate these cases by running a query to see how many ride distances were `greater than` 100 miles.
+    * Given that this was more than half the length of the United States, there was no way this ride distance could be right. So I decided to investigate these cases by running a query to see how many ride distances were `greater than` 100 miles.
     
     *  Fortunately, there were only `three` entries greater than 100 miles; all of which were roughly 6000 miles in length. The rest of the `ride_miles` columns were under 30 miles.
     
