@@ -112,9 +112,9 @@ AND LENGTH(ride_id) = 16
 
 <br>
 
-Fortunately, all the duplicates were sucessfully removed. A huge problem had been identified and quickly solved. 
+The query above confirmed that all of the duplicated ride_ids had been sucessfully removed. 
 
-The next step was to process the data through various tasks that would make it much easier to run queries and get all the data I needed in the `same place`:
+Now that the duplicates were sorted out, the next step was to process the data through various tasks that would make it much easier to run queries and get all the data I needed in the `same place`:
 
 <br>
 
