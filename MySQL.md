@@ -596,17 +596,28 @@ LIMIT 10;
 
 <br>
 
-Okay, that was `a lot` of information. 
+<br>
 
 <br>
 
-If you've read this far, I'd like to take this moment to thank you personally. I sincerely appreciate all the time and effort you've taken to check out my work.
+# Final Thoughts: 
 
 <br>
 
-Now, to check out all the `data visualizations` I created in `Tableau`, here's a link back to the main page: 
+<br>
+
+Wow. Okay. That was `a lot` of information. 
 
 <br>
+
+As a quick reminder, all of the insights I listed above are `fully summarized` on the main page so that it's super easy to skim through all the data findings. 
+
+<br>
+
+Also, if you're anything like me, and you'd much rather look at a set of charts than read through a massive stack of data analysis documentation, you might like to check out the `data visualization` section I created using `Tableau`. It'll be at the `bottom` of the main page, which you can quickly go back to using the link `below`: 
+
+<br>
+
 
 ### Link: [Back to Main Page](https://github.com/mauriciolarroque/Bikeshare-Case-Study/blob/main/README.md#part-iv-mysql-data-analysis)
 
