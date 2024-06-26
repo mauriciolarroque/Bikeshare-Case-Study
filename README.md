@@ -294,7 +294,7 @@ To start off, we can see here that there are substantially more members than the
 
 <br>
 
-
+![Rideable Type (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/e1b2d271-b8ff-434a-8d1d-de6f2d39a6ef)
 
 
 
