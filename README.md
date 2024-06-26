@@ -277,6 +277,15 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
 ![Frame 7 (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/0ff35948-935e-4b09-8458-8f9e272c13cc)
 
+<br>
+
+<br>
+
+Using `Tableau`, I converted the insights listed above into simple visualizations that make it easy to grasp the differences between how members and casual users behave: 
+
+<br>
+
+
 
 
 
