@@ -52,11 +52,11 @@ The CMO has ****three main questions**** she wants us to answer:
 
 <br>
 
-  > 1. How does casual rider behavior differ from annual member behavior?
+  > 1. How does casual rider behavior compare and contrast to annual member behavior?
  
-  > 2. Why would casual riders want to buy an annual membership?
+  > 2. What reasons do casual riders have to want to purchase an annual membership?
  
-  > 3. How can Cyclistic leverage digital media to convert casual users into annual members?
+  > 3. How can Cyclistic use digital media to convert casual users into annual members?
 
 <br>
 
@@ -65,11 +65,11 @@ The CMO has ****three main questions**** she wants us to answer:
 
 <br>
 
-To get started, I downloaded all the datasets for Cyclistic's `2023` data:
+To get started, I downloaded all of the datasets for Cyclistic's `2023` data:
 
 ![Group 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/1c2e4a28-1100-4fc0-80bc-13fd9aa52173)
 
-After the ZIPs were downloaded, I made two separate folders. One had the original files for future reference, while the other had the CSVs I would be editing. 
+After the ZIPs were downloaded, I made two separate folders. One had the original files for future reference, while the other had the CSVs I would be editing and cleaning. 
 > [!NOTE]
 > The data did **not** include information about individual users. Each row just represented a bike ride that had taken place, and a column called `member_casual` indicated whether the person who went on that ride was a member or a casual user. Thus, I was unable to analyze individual user habits or count the number of members compared to casual riders, which introduced some limitation to the analysis. 
 
@@ -180,9 +180,9 @@ After converting the CSVs into **Excel Workbooks**, I went through the following
 
   <br>
   
-  * So, to kick things off, we're going to see `how many rides` are attributed to annual members vs. casual riders.
+  * The first thing we'll analyze is `how many rides` are attributed to annual members and how many are attributed to casual riders.
 
-    * We'll also be taking the percentages of each category of user – as well as dividing the data by quarterly results – to get a more complete picture of what's going on:
+    * We'll also be taking the percentages of each category of user to make it easier to see what's going on:
 
 <br>
 
@@ -272,7 +272,7 @@ FROM ride_counts;
    
 <br>
 
-#### Next, let's review summary statistics for the whole table:
+The next step is to pull up `summary statistics` for the full year of data:
 
 <br>
 
@@ -323,7 +323,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
- * On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there was only a slight difference between both groups. 
+ * On average, we can see that `casual` users ride about `twice` as long as member users when it comes to classic bikes. On electric bikes, there is only a slight difference between both groups. 
 
    * In terms of `miles traveled`, both members and casual riders travel about the same distance on an average trip.
 
@@ -343,7 +343,7 @@ ORDER BY member_casual, rideable_type;
 
 <br>
 
-* The next step is to calculate the `median` data for ride duration: 
+* Now, we're going to calculate the `median` data for ride duration: 
   
 <br>
 
