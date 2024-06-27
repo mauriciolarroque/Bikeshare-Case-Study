@@ -325,7 +325,7 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 * When we plot the `top 5 start stations` on a map, it's easier to see the geographic differences between user categories. 
 
-  * The most popular stations for casual users are near the `waterfront` – near the best tourist attractions – while the most popular member stations are centered around `urban` areas, which tend to be less popular overall with tourists.  
+  * The most popular stations for casual users are at the `waterfront` – near the best tourist attractions – while the most popular member stations are centered around `urban` areas, which tend to be less popular overall with weekend tourists.  
 
 <br>
 
