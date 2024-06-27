@@ -293,8 +293,6 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
-To start off, we can see here that there are substantially more members than there are casual users. For this reason, a lot of the subsequent analysis will focus more on the `differences` between the `percentage` of rides for each user category, rather than the raw numbers:  
-
 
 <br>
 
@@ -302,9 +300,32 @@ To start off, we can see here that there are substantially more members than the
 
 <br>
 
-In terms of which types of bikes were used, there `doesn't` seem to be much variance at all between members and casual users. The only notable difference here is that only casual users are using `docked bikes.` Overall, there isn't much difference in this category of user behavior. 
+![Top 10 Stations](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/0bbaf75e-5074-4dfa-9709-e4da19197560)
 
 <br>
+
+![Top 5 start Stations](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/208595a1-6c49-4d50-a4ae-b54b72113fe9)
+
+<br>
+
+![% Rides per Day of Week](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/b6f7119d-703c-4da0-821d-52b19c49799c)
+
+<br>
+
+
+![Ride  Increases Monthly](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/80c5db90-269e-495a-8511-e28a2c633852)
+
+<br>
+
+![Monthly Ride Minutes (1)](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/70e498fc-824c-4b33-a5d5-554df7e61f4f)
+
+<br>
+
+![Ride Times Percentages](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/2c393daf-17a3-47c7-8685-dfc2f04f49c5)
+
+
+
+
 
 
 
