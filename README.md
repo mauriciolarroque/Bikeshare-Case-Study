@@ -335,7 +335,7 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
-* By measuring the percentage of rides in each catgeory that occurred on different days of the week, we can see that `members` were more likely to ride on weekdays, and casual users preferred `weekends.` 
+* By measuring the percentage of rides in each category that occurred on different days of the week, we can see that `members` were more likely to ride on weekdays, and casual users preferred `weekends.` 
 
   * This suggests that `members` go on rides more often to go to work, while casual users ride on bikes more often `just for fun.` 
 
