@@ -427,7 +427,9 @@ Based on what we've found, here are my `top` recommendations for how we should m
 
 <br>
 
-* Another important finding from the data is that `casual` users go on `longer` rides than members. Their time spent riding `particularly` increases during the summer months. This would be a great opportunity to run ads that show casual users `how much` they can save on bike-riding fees this summer by upgrading to an annual membership.
+* Another important finding from the data is that `casual` users go on `longer` rides than members. Their time spent riding `particularly` increases during the summer months.
+
+  * This would be a great opportunity to run ads that show casual users `how much` they can save on bike-riding fees `this summer` by upgrading to an annual membership.
 
   * Because `casual rides` peak in the summer, there's a high chance that many casual users are `tourists`. Thus, the ads we run can include easily understandable calculations of how much money they can save on touring the city by bike with a Cyclistic annual membership.
     
