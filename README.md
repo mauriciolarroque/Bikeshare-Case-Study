@@ -359,13 +359,20 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
-
+* This is a very important finding. Not only do casual users ride `longer` than members, but ther ride times increase `specifically` during the summer months. In contrast, member ride times are shorter on average and remain `at the same level` throughout the entire year. 
 
 <br>
 
 <br>
 
 ![Ride Times Percentages](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/2c393daf-17a3-47c7-8685-dfc2f04f49c5)
+
+<br>
+
+* The member data here is much more `bimodal` than the casual user data. As we saw earlier, it is reflective of a user base that revolves around the `9 to 5` schedule. We can see how there are notable peaks in member user activity at `8AM` and at `5PM`. 
+
+  * When it comes to casual users, we can see that their user activity slowly climbs up throughout the day. There are evident patterns which point to more `recreational` use of bikes, such as higher activity than members in the late-night hours and during typical working hours. 
+
 
 <br>
 
@@ -402,9 +409,9 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 * Since we know that the most popular start station for casual users `by far` is the one near the Navy Pier, we should offer `discount codes` for restaurants, eateries, guided tours, and other local attractions that are in the vicinity of that station. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
 
-  * The weekday percentages data also revealed that `Saturday` is the most popular ride day for casual users. Therefore, promotional offers can also include `weekend events` such as concerts, arts & music festivals, and so on.
+  * The data on weekday percentages also revealed that `Saturday` is the most popular ride day for casual users. Therefore, promotional offers should likewise include `weekend events` such as concerts, arts & music festivals, and other community events.
 
-    * In turn, these ads can extol the `benefits` of riding bikes, such as the `convenience` of avoiding traffic, the `freedom` of flexible transportation, and the `proximity` of bike stations to local hotels.
+    * Our ads can extol the `benefits` of riding bikes to these weekend events, such as the `convenience` of avoiding traffic, the `freedom` of flexible transportation, and the `proximity` of bike stations to local hotels.
 
 <br>
 
