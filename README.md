@@ -281,7 +281,7 @@ For now, to save some time and space, here are `all` the summarized `key insight
 
 <br>
 
-Using `Tableau`, I converted the insights listed above into simple visualizations that make it easy to grasp the differences between how members and casual users behave
+Using `Tableau`, I converted the insights listed above into simple visualizations. Let's break them down `one by one`:
 
 <br>
 
@@ -293,6 +293,9 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
+* This graph shows how  `member` rides are outnumbering casual user rides. 
+
+  * Because of this, it would be more helpful to compare `percentages` in each category – rather than raw numbers – to better understand the differences between members and casual users. 
 
 <br>
 
@@ -300,7 +303,19 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
+Judging from this data, there `don't` appear to be many differences in which types of bikes members prefer to use vs. casual users. We can see that `only` casual users are riding on `docked bikes`, but both categories seem to have the same preferences with regards to ordinary and electric bikes. 
+
+<br>
+
+<br>
+
 ![Top 10 Stations 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/e4694395-9273-4e2e-b9f9-74a253769228)
+
+<br>
+
+* This graph shows that the `number one` start station for casual users is `disproportionately` more popular than the other leading stations. In the data for members, the popularity for the top 10 stations is much more `evenly` spread out.
+
+<br>
 
 <br>
 
@@ -308,12 +323,35 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
+* When we plot the `top 5 start stations` on a map, it's easier to see the geographic differences between user categories. 
+
+  * The most popular stations for casual users are near the `waterfront` – near the best tourist attractions – while the most popular member stations are centered around `urban` areas, which tend to be less popular overall with tourists.  
+
+<br>
+
+<br>
+
 ![% Rides per Day of Week](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/b6f7119d-703c-4da0-821d-52b19c49799c)
 
 <br>
 
+* By measuring the percentage of rides in each catgeory that occurred on different days of the week, we can see that `members` were more likely to ride on weekdays, and casual users preferred `weekends.` 
+
+  * This suggests that `members` go on rides more often to go to work, while casual users ride on bikes more often `just for fun.` 
+
+<br>
+
+<br>
 
 ![Ride  Increases Monthly](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/80c5db90-269e-495a-8511-e28a2c633852)
+
+<br>
+
+* This chart measures how the amount of rides attributed to `members` vs. the amount of rides attributed to `casual` users increased throughout the year. 
+
+  * Casual users see a more dramatic `spike` in activity during the summer, followed by a notable drop as we approach winter. Members also experience a similar peak period during the summer, but their activity remains comparatively `stable` year-round. 
+    
+<br>
 
 <br>
 
@@ -321,7 +359,36 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
+
+
+<br>
+
+<br>
+
 ![Ride Times Percentages](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/2c393daf-17a3-47c7-8685-dfc2f04f49c5)
+
+<br>
+
+<br>
+
+<br>
+
+# Part VI: Final Recommendations 
+
+<br>
+
+* Based on all the data we've found, here are some recommendations for how we should convert casual users into annual members.
+
+<br>
+
+<br>
+
+## 1. Focus Advertising During the Summer Season 
+
+  * `Casual` rider activity starts climbing up during the spring and dramatically peaks during the summer. Therefore, the `best strategy` is to run ads from the middle of April to the end of August.
+
+  * These ads 
+
 
 
 
