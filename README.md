@@ -300,7 +300,7 @@ Using `Tableau`, I converted the insights listed above into simple visualization
 
 <br>
 
-![Top 10 Stations](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/0bbaf75e-5074-4dfa-9709-e4da19197560)
+![Top 10 Stations 1](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/e4694395-9273-4e2e-b9f9-74a253769228)
 
 <br>
 
