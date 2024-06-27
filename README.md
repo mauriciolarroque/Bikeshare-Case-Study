@@ -411,9 +411,9 @@ Now that we've pulled up all this data, it's time to focus on `how` we're going 
 
 <br>
 
-* Since we know that the most popular start station for casual users `by far` is the one near the Navy Pier, we should offer `discount codes` for restaurants, eateries, guided tours, and other local attractions that are in the vicinity of that station. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
+* Since we know that the most popular start station for casual users `by far` is the one near the Navy Pier, we should offer `discount codes` for restaurants, guided tours, and other local attractions when you purchase a membership. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
 
-  * The data on weekday percentages also revealed that `Saturday` is the most popular ride day for casual users. Therefore, promotional offers should likewise include `weekend events` such as concerts, arts & music festivals, and other community events.
+  * The data on weekday percentages revealed that `Saturday` is the most popular ride day for casual users. Therefore, these promotional offers should also include `weekend events` such as concerts, arts & music festivals, and other local events.
 
     * Our ads can extol the `benefits` of riding bikes to these weekend events, such as the `convenience` of avoiding traffic, the `freedom` of flexible transportation, and the `proximity` of bike stations to local hotels.
 
@@ -427,7 +427,7 @@ Now that we've pulled up all this data, it's time to focus on `how` we're going 
 
 * Another important finding from the data is that `casual` users go on `longer` rides than members. Their time spent riding `particularly` increases during the summer months. This would be a great opportunity to run ads that show casual users `how much` they can save on bike-riding fees this summer by upgrading to an annual membership.
 
-  * Because `casual rides` peak in the summer, there's a high chance that many casual users are `tourists`. Thus, the ads we run can include easily digestible calculations of how much money they can save on touring the city by bike with a Cyclistic annual membership.
+  * Because `casual rides` peak in the summer, there's a high chance that many casual users are `tourists`. Thus, the ads we run can include easily understandable calculations of how much money they can save on touring the city by bike with a Cyclistic annual membership.
     
 <br>
 
