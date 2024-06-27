@@ -413,9 +413,9 @@ Based on what we've found, here are my `top` recommendations for how we should m
 
 <br>
 
-* Since we know that the most popular start station for casual users `by far` is the one next to Navy Pier, new members should get `discount codes` for restaurants, guided tours, and other local attractions in the vicinity. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
+* Since we know that the most popular start station for casual users `by far` is the one next to Navy Pier, new members should receive `discount codes` for restaurants, guided tours, and other local attractions in the area. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
 
-  * The data on weekday percentages revealed that `Saturday` is the most popular ride day for casual users. Therefore, these promotional offers should also include `weekend events` such as concerts, arts & music festivals, and other local events.
+  * The data on weekday percentages revealed that `Saturday` was the most popular ride day for casual users. Therefore, these promotional offers should also include `weekend events` such as concerts, art shows, music festivals, and other local events.
 
     * Our ads can extol the `benefits` of riding bikes to these weekend events, such as the `convenience` of avoiding traffic, the `freedom` of flexible transportation, and the `proximity` of bike stations to local hotels.
 
