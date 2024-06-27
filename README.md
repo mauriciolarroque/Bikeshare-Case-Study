@@ -382,11 +382,6 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
-
-* Based on all the data we've found, here are some recommendations for how we should convert casual users into annual members.
-
-<br>
-
 <br>
 
 <br>
