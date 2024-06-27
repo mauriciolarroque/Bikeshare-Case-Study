@@ -391,7 +391,9 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
-Now that we've pulled up all this data, it's time to focus on `how` we're going to advise the marketing team on `converting` casual users into members. Based on what we've found here are `4` recommendations for how we should focus these ads: 
+Now that we've pulled up all this data, it's time to focus on `how` we're going to advise the marketing team on `converting` casual users into members. 
+
+Based on what we've found, here are my `top` recommendations for how we should move forward:
 
 <br>
 
