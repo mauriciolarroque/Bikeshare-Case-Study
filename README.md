@@ -411,7 +411,7 @@ Now that we've pulled up all this data, it's time to focus on `how` we're going 
 
 <br>
 
-* Since we know that the most popular start station for casual users `by far` is the one near the Navy Pier, we should offer `discount codes` for restaurants, guided tours, and other local attractions when you purchase a membership. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
+* Since we know that the most popular start station for casual users `by far` is the one next to Navy Pier, new members should get `discount codes` for restaurants, guided tours, and other local attractions in the vicinity. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership.
 
   * The data on weekday percentages revealed that `Saturday` is the most popular ride day for casual users. Therefore, these promotional offers should also include `weekend events` such as concerts, arts & music festivals, and other local events.
 
