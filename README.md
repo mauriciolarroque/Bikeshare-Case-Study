@@ -377,6 +377,12 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
+![Oxygen480-actions-office-chart-line-stacked](https://github.com/mauriciolarroque/Bikeshare-Case-Study/assets/172843436/60b2a84f-cd02-493b-aed1-feeaa7e4398b)
+
+
+<br>
+
+
 * Based on all the data we've found, here are some recommendations for how we should convert casual users into annual members.
 
 <br>
