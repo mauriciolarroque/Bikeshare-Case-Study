@@ -383,15 +383,39 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
-## 1. Focus Advertising During the Summer Season 
+<br>
 
- ### * Casual rider activity starts climbing up during the spring and dramatically peaks during the summer. Therefore, the best strategy is to run ads from the middle of April to the end of August.
+## 1. Focus Advertising During the Summer Season 
 
 <br>
 
-## 2. Promotional Offers
+* `Casual` rider activity starts climbing up during the spring and dramatically peaks during the summer. Therefore, the `best strategy` is to run ads from the middle of April to the end of August. Additionally, since we know that rider activity is most active from `3PM to 7PM`, we should run ads within the `bikesharing app` during those times. 
 
-  ### * Since we know that the most popular 
+<br>
+
+<br>
+
+## 2. Include Promotional Offers 
+
+<br>
+
+* Since we know that the most popular start station for casual users `by far` is the one near the Navy Pier, we should offer `discount codes` for restaurants, eateries, guided tours, and other local attractions that are in the vicinity of that station. We can also implement `referral bonuses` for users that get other friends to sign up for an annual membership. 
+
+<br>
+
+<br>
+
+## 3. Emphasis on Savings Through Membership
+
+<br>
+
+* Another important finding from the data is that `causal` users go on `longer` rides than members. Their time spent riding `particularly` increases during the summer months. This would be a great opportunity to run ads that show casual users `how much` they can save on bike-riding fees this summer by upgrading to an annual membership.
+
+<br>
+
+<br>
+
+## 4. 
 
 
 
