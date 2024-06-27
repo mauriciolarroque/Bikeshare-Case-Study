@@ -395,6 +395,8 @@ Now that we've pulled up all this data, it's time to focus on `how` we're going 
 
 <br>
 
+<br>
+
 ## 1. Focus Advertising During the Summer Season 
 
 <br>
