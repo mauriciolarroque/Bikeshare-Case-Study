@@ -439,7 +439,7 @@ Based on what we've found, here are my `top` recommendations for how we should m
 
 <br>
 
-  * Due to the fact that many rides had egregiously long ride times, there's a `high` likelihood that many users had some kind of faulty experience with their bikes. We want to assure users that we are on top of any issues they may experience, so part of our advertising strategy should focus on showing our users that we offer `multiple avenues` for help and customer support.
+  * Due to the fact that many rides had egregiously long ride times, there is a `high` likelihood that many users had some kind of faulty experience with their bikes. We want to assure users that we are on top of any issues they may experience, so part of our advertising strategy should focus on showing our users that we offer `multiple avenues` for help and customer support.
 
 <br>
 
