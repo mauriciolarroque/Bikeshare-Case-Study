@@ -313,7 +313,7 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 <br>
 
-* This graph shows that the `number one` start station for casual users is `disproportionately` more popular than the other leading stations. In the data for members, the popularity for the top 10 stations is much more `evenly` spread out.
+* This graph shows that the `number one` start station for casual users is `disproportionately` more popular than the other leading stations. In the data for members, the popularity for the top 10 stations is more `evenly` spread out.
 
 <br>
 
