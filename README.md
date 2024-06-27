@@ -385,10 +385,13 @@ Judging from this data, there `don't` appear to be many differences in which typ
 
 ## 1. Focus Advertising During the Summer Season 
 
-  * `Casual` rider activity starts climbing up during the spring and dramatically peaks during the summer. Therefore, the `best strategy` is to run ads from the middle of April to the end of August.
+ ### * Casual rider activity starts climbing up during the spring and dramatically peaks during the summer. Therefore, the best strategy is to run ads from the middle of April to the end of August.
 
-  * These ads 
+<br>
 
+## 2. Promotional Offers
+
+  ### * Since we know that the most popular 
 
 
 
